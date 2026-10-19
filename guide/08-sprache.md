@@ -106,6 +106,8 @@ Rechtlich verpflichtend, wörtlich, über jedem KI-Ergebnis, nicht kürzen, nich
 **Ausgelesene Werte (OCR):**
 > Die von der KI ausgelesenen Werte können Fehler enthalten. Vergleich sie immer mit dem Originaldokument. Frappies übernimmt keine Gewähr für die Richtigkeit.
 
+Liest ein Ergebnis Werte aus und deutet sie (Befund mit Diagnosen oder Empfehlungen), stehen der allgemeine Hinweis und der OCR-Hinweis darüber, in dieser Reihenfolge. In einer Liste von KI-Ergebnissen (Verlauf) steht jeder Hinweis, der auf einen Eintrag der Liste zutrifft, einmal über der Liste, nicht in jedem Eintrag.
+
 Der Hinweis steht im Hinweisbanner (Kleedunst, Dunsttinte, Info-Icon, 14-px-Radius). Auf der Website steht derselbe Text überall, wo KI-Funktionen beworben werden.
 
 ## Privatsphäre im Text
@@ -115,3 +117,10 @@ Wo Fotos ins Spiel kommen, wird gesagt, was passiert: „Foto ist auf deinem Ger
 ## Englisch
 
 Englisch folgt denselben Regeln: „you“, sentence case, dasselbe Glossar, dieselben Hinweise. Englische Texte entstehen aus den deutschen, nicht umgekehrt.
+
+## Entscheidungen
+
+### 2026-10-19: KI-Hinweise über Listen von KI-Ergebnissen
+Kontext: Der KI-Verlauf der App zeigt Befunde und Futterpläne als Liste. „Über jedem KI-Ergebnis“ hätte einen Hinweis in jeder Karte bedeutet. Fall 1 (neues Muster).
+Entscheidung: Jeder zutreffende Hinweis steht einmal über der Liste, wörtlich und vollständig. Deutende Befunde tragen allgemeinen und OCR-Hinweis.
+Verworfen: Hinweis in jeder Karte (Wiederholung, die niemand mehr liest), nur der allgemeine Hinweis über der Liste (Futter- und OCR-Hinweis fehlten).
