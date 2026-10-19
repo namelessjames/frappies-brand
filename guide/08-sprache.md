@@ -124,3 +124,4 @@ Englisch folgt denselben Regeln: „you“, sentence case, dasselbe Glossar, die
 Kontext: Der KI-Verlauf der App zeigt Befunde und Futterpläne als Liste. „Über jedem KI-Ergebnis“ hätte einen Hinweis in jeder Karte bedeutet. Fall 1 (neues Muster).
 Entscheidung: Jeder zutreffende Hinweis steht einmal über der Liste, wörtlich und vollständig. Deutende Befunde tragen allgemeinen und OCR-Hinweis.
 Verworfen: Hinweis in jeder Karte (Wiederholung, die niemand mehr liest), nur der allgemeine Hinweis über der Liste (Futter- und OCR-Hinweis fehlten).
+App: namelessjames/frappies#98.
