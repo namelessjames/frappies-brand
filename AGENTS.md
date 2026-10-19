@@ -52,4 +52,6 @@ Hundewiese am Nachmittag. One idea: the tennis ball sits on the next thing your 
 
 ## Changing the brand
 
-Values change in `tokens/tokens.json` first, then `node scripts/build-tokens.js`, then `node scripts/check-contrast.js` must exit 0, then the matching chapter in `guide/`, then the app. A change to a named rule or the palette is a brand decision: write it up in `CONTRIBUTING.md`'s decision format and ask the owner. Do not drift a value to make one screen easier.
+Values change in `tokens/tokens.json` first, then `node scripts/build-tokens.js`, then `node scripts/check-contrast.js` must exit 0, then the matching chapter in `guide/`, then the app (`src/hooks/useThemeColors.ts`, `src/global.css`; its CI runs `bun run brand:check` against this repo). Do not drift a value to make one screen easier.
+
+A change is legitimate while building the app or the website when it is one of three things: a new component or pattern the brand does not cover, a sensible evolution of the system, or a measurably better experience where a rule and a usability finding collide. Write it up in the decision format in `CONTRIBUTING.md` at the end of the affected chapter, naming the category. New components may land directly on `master`; changes to something that already exists go through a pull request and the owner's approval. The full protocol, from the app's side, is `docs/agents/brand.md` in `namelessjames/frappies`.

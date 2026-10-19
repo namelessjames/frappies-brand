@@ -24,6 +24,18 @@ Eine Markenentscheidung braucht das Okay der Inhaberin oder des Inhabers, bevor 
 
 Keine Markenentscheidung, einfach machen: ein zusätzliches Beispiel, eine Korrektur eines Tippfehlers, ein weiterer Token, der nur einen bestehenden Wert unter einem Rollennamen verfügbar macht, eine Erweiterung der Kontrastliste.
 
+## Ausnahmen während der Entwicklung
+
+Die Marke ist nicht eingefroren. Wer an der App oder der Website baut, darf sie ändern, wenn einer von drei Fällen vorliegt:
+
+1. **Neue Komponente oder neues Muster**, das die Marke noch nicht abdeckt (ein neuer Chip-Typ, ein Diagramm, ein neuer Leerzustand).
+2. **Sinnvolle Weiterentwicklung des Systems**, wenn die bestehende Regel ein schlechteres Ergebnis liefert als eine konsistente Änderung (ein Radius, der nicht mehr passt; ein Token, das jeder Bildschirm unter einer neuen Rolle braucht).
+3. **Messbar bessere Nutzung**, wenn Regel und Befund kollidieren (Kontrast, Trefferfläche, Lesbarkeit, eine verwirrende Farbbedeutung).
+
+Nie legitim: einen Wert verschieben, ein Grau ergänzen, Filz auf ein zweites Element setzen oder einen Hinweis kürzen, weil ein Bildschirm damit leichter wird.
+
+Ablauf im selben Arbeitsgang: zuerst hier ändern (Token oder Kapitel, Skripte laufen lassen), die Entscheidung im Format unten mit Nennung des Falls eintragen, dann die App oder Website nachziehen, beide Änderungen gegenseitig verlinken. Fall 1 darf direkt auf `master`. Fall 2 und 3 ändern Bestehendes und gehen über einen Pull Request mit Freigabe der Inhaberin oder des Inhabers, bevor die App-Änderung gemergt wird. Im Zweifel gilt Fall 2. Die Sicht der App steht in `docs/agents/brand.md` in `namelessjames/frappies`.
+
 ## Entscheidungsformat
 
 Kurz, am Ende des betroffenen Kapitels unter „Entscheidungen“, mit Datum:
