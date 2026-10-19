@@ -1,0 +1,53 @@
+/* Generated from tokens/tokens.json by scripts/build-tokens.js. Do not edit by hand. */
+
+/* Tailwind v4 theme. Import after tailwindcss; pair with tokens.css for the dark overrides. */
+@theme {
+  --color-background: #F2F4EC;
+  --color-foreground: #14301F;
+  --color-card: #FFFFFF;
+  --color-primary: #D9EE52;
+  --color-primary-foreground: #14301F;
+  --color-primary-soft: #ECF5C4;
+  --color-primary-hover: #CDE33F;
+  --color-brand: #2E6B3F;
+  --color-secondary: #14301F;
+  --color-secondary-foreground: #F2F4EC;
+  --color-accent: #E7EBDD;
+  --color-accent-foreground: #3F5A47;
+  --color-muted: #E7EBDD;
+  --color-muted-foreground: #5B6F5F;
+  --color-border: #DCE3D3;
+  --color-destructive: #B42318;
+  --color-destructive-foreground: #FFFFFF;
+  --color-success: #2E6B3F;
+  --color-warning: #FF6A3D;
+  --color-warning-foreground: #14301F;
+  --color-warning-ink: #B83A14;
+  --color-info: #2E6B3F;
+  --color-shell: #14301F;
+  --color-shell-foreground: #F2F4EC;
+  --color-shell-muted: #A9B8A6;
+  --color-shell-raised: #22432F;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: Figtree, system-ui, sans-serif;
+
+  --radius-control: 14px;
+  --radius-card: 18px;
+  --radius-shell: 28px;
+  --radius-pill: 9999px;
+  --radius-nested-sm: 6px;
+  --radius-nested-md: 10px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 48px;
+  --spacing-5xl: 80px;
+
+  --shadow-fab: 0px 6px 14px 0px rgba(20, 48, 31, 0.25);
+}

@@ -1,0 +1,9 @@
+{
+  "prompt": "Derived from lead.png (gpt-image generation, prompt in lead.png.json) by a deterministic pixel pass: each pixel unmixed into ink/white/felt, white coat made transparent, clover ink #14301F recoloured to light #F2F4EC, felt chartreuse kept. For use on the dark clover shell and dark-mode grounds.",
+  "createdAt": "2026-10-11T15:24:52.000Z",
+  "tool": "derived (python PIL/numpy unmix pass)",
+  "derivedFrom": "assets/images/illustrations/lead.png",
+  "transform": "white -> transparent; ink #14301F -> #F2F4EC; felt kept",
+  "background": "transparent",
+  "outputFormat": "png"
+}

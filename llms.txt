@@ -1,0 +1,24 @@
+# Frappies Brand
+
+> Brand guideline for Frappies, a dog health record app (DACH market, German first, informal "du"). World: "Hundewiese am Nachmittag" (afternoon dog meadow). Idea: the tennis ball always sits on the next thing your dog needs.
+
+## Start here
+- [AGENTS.md](AGENTS.md): rules in checkable form, token paths, what never to do.
+- [tokens/tokens.json](tokens/tokens.json): the single source of truth (W3C DTCG). Colours light/dark, type, radius, space, size, shadow, motion.
+- [tokens/tokens.css](tokens/tokens.css): generated CSS custom properties.
+
+## Guide (German)
+- [guide/00-marke.md](guide/00-marke.md): brand idea, personality, principles.
+- [guide/01-logo.md](guide/01-logo.md): mark, wordmark, clear space, minimum sizes.
+- [guide/02-farbe.md](guide/02-farbe.md): palette, roles, named rules, contrast table.
+- [guide/03-typografie.md](guide/03-typografie.md): Bricolage Grotesque + Figtree, hierarchy.
+- [guide/04-form-und-raum.md](guide/04-form-und-raum.md): radii, spacing, sizes, depth, layout.
+- [guide/05-illustration.md](guide/05-illustration.md): the Frappies dog, eight poses, generation prompt.
+- [guide/06-ikonografie.md](guide/06-ikonografie.md): Phosphor Icons, weight bold.
+- [guide/07-bewegung.md](guide/07-bewegung.md): springs, the rolling ball, reduced motion.
+- [guide/08-sprache.md](guide/08-sprache.md): voice, tone, glossary DE/EN, error copy, AI disclaimers.
+- [guide/09-komponenten.md](guide/09-komponenten.md): component specs.
+- [guide/10-anwendung.md](guide/10-anwendung.md): app, website, e-mail, stores, social, print.
+
+## Assets
+- [assets/logo/](assets/logo/), [assets/app-icon/](assets/app-icon/), [assets/illustrations/](assets/illustrations/)

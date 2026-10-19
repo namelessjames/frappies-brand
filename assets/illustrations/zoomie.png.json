@@ -1,0 +1,11 @@
+{
+  "prompt": "Hand-drawn editorial illustration in exactly the style of the reference sheet: loose, confident brush-pen ink line of one even weight, slightly wobbly organic strokes, a few flat solid fill shapes, no shading, no gradients, no texture, no text, no ground shadow. Exactly two colours: line work in deep clover green-black #14301F and flat fills in tennis-ball felt chartreuse #D9EE52. Fully transparent background, the subject isolated with generous empty margin.\n\nSubject: a scruffy medium-sized mixed-breed dog mid-zoomies, in full gallop towards the right of the frame, all four legs stretched out, floppy ears flying back, tongue out, tail up, pure joy. A few short speed lines trail behind it. The dog's body has one large flat chartreuse fill patch (like the reference's filled garments), the rest is line. Adult, natural proportions, warm and witty but not cartoony or childish. Wide landscape composition, dog centred.\n",
+  "createdAt": "2026-10-10T14:10:50.024Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "docs/zoomies-image-examples.png"
+  ]
+}

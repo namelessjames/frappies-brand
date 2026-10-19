@@ -1,0 +1,11 @@
+{
+  "prompt": "Hand-drawn editorial illustration in exactly the style of the reference image: the same scruffy dog, the same loose, confident brush-pen ink line of one even weight, slightly wobbly organic strokes, a few flat solid fill shapes, no shading, no gradients, no texture, no text, no ground shadow. Exactly the same palette: line work in deep clover green-black #14301F, flat fills in tennis-ball felt chartreuse #D9EE52, the dog body white. Fully transparent background, the subject isolated with generous empty margin.\n\nSubject: the same scruffy mixed-breed dog standing, seen from the side, nose down sniffing a single loose sheet of paper lying flat on the ground. The paper is a plain white rectangle outlined in ink with a few short wavy ink lines suggesting writing, no readable text, no numbers. One flat chartreuse fill patch on the dog's body like the reference. Tail up, focused and curious. Three tiny sniff marks near the nose. Wide landscape composition, centred.\n",
+  "createdAt": "2026-10-11T07:08:34.250Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "assets/images/illustrations/zoomie.png"
+  ]
+}

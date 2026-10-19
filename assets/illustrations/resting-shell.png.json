@@ -1,0 +1,9 @@
+{
+  "prompt": "Derived from resting.png (gpt-image generation, prompt in resting.png.json) by a deterministic pixel pass: white coat pixels made transparent, clover ink #14301F recoloured to light #F2F4EC, felt chartreuse kept. For use on the dark clover shell.",
+  "createdAt": "2026-10-10T15:00:00.000Z",
+  "tool": "derived (python PIL pixel pass)",
+  "derivedFrom": "assets/images/illustrations/resting.png",
+  "transform": "white -> transparent; ink #14301F -> #F2F4EC; felt kept",
+  "background": "transparent",
+  "outputFormat": "png"
+}

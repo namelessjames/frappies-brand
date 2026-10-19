@@ -1,0 +1,11 @@
+{
+  "prompt": "Hand-drawn editorial illustration in exactly the style of the reference image: the same scruffy dog, the same loose, confident brush-pen ink line of one even weight, slightly wobbly organic strokes, a few flat solid fill shapes, no shading, no gradients, no texture, no text, no ground shadow. Exactly the same palette: line work in deep clover green-black #14301F, flat fills in tennis-ball felt chartreuse #D9EE52, the dog body white. Fully transparent background, the subject isolated with generous empty margin.\n\nSubject: the same scruffy mixed-breed dog sitting upright, seen three-quarters from the side, head tilted to one side with one ear perked up and the other floppy, listening attentively to a quiet sound. Mouth closed, calm and curious. A single flat chartreuse fill patch on its body like the reference. Two tiny curved sound marks near the perked ear. Wide landscape composition, centred.\n",
+  "createdAt": "2026-10-11T07:08:32.546Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "assets/images/illustrations/zoomie.png"
+  ]
+}
