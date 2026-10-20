@@ -60,4 +60,4 @@ Schriften werden nicht mitgeliefert. Beide sind Google Fonts unter der SIL Open 
 
 Die App (`namelessjames/frappies`) ist die gebaute Wahrheit dieser Marke; ihre Werte sind hier abgeschrieben, nicht umgekehrt erfunden. Dieses Repository ist ab jetzt die verbindliche Quelle. Ändert sich ein Wert, ändert er sich zuerst hier, dann in `src/hooks/useThemeColors.ts` und `src/global.css` der App. Siehe [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Nicht Teil der Marke, weil noch nicht entschieden: Preise, Impressum, Firmenname und Rechtstexte. Nichts davon wird in Markenmaterial erfunden.
+Nicht Teil der Marke, weil noch nicht entschieden: Impressum, Firmenname und Rechtstexte. Nichts davon wird in Markenmaterial erfunden.
