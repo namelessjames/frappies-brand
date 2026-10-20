@@ -27,7 +27,7 @@ Hundewiese am Nachmittag. One idea: the tennis ball sits on the next thing your 
 - **The ball scale.** Urgency is shown by ball size in a fixed 40px slot: 34px seam ball (today/overdue), 22px disc (this week), 10px hedge dot (later). Never by colour alone.
 - **Reduced motion.** Every motion has a branch that renders the final state. No autoplay loops without it.
 - **Honest AI.** Every AI output carries the legally required disclaimer verbatim (`guide/08-sprache.md`, section "KI-Hinweise"). Do not soften or shorten it.
-- **Nothing invented.** No prices, company name, address, legal text, testimonials, user counts, press quotes, vet endorsements or awards. None of these exist yet.
+- **Nothing invented.** No company name, address, legal text, testimonials, user counts, press quotes, vet endorsements or awards. None of these exist yet. Prices are set: use only the table in `guide/10-anwendung.md`, section "Website".
 - **Dog, not pet.** User-facing copy says Hund/dog. Database naming (`pets`) does not leak into copy.
 - **Loaded symbols stay out.** The meadow world uses balls, clover, hedges, frisbees, dogs. Nothing else as ornament.
 

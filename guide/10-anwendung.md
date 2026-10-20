@@ -19,7 +19,14 @@ Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, da
 1. **Hero auf der Kleeschale**, genau wie Home: Wortmarke in Filz oben links, Display XL mit genau einem Satzteil in Filz, die Zoomie-Shell-Illustration läuft rechts aus dem Bild. Ein Primärbutton. Die Schale endet in 28-px-Unterecken.
 2. **Danach Kleeboden** mit weißen Karten, die echte App-Inhalte zeigen: eine Hundekarte mit Ball, eine Akten-Zelle, ein Zeit-Chip in Orange. Die Website zeigt das Produkt, nicht Symbole für das Produkt.
 3. **Privatsphäre und KI** als eigene Sektion, in der Schärfe aus [08 Sprache](08-sprache.md): Bilder flüchtig, nur Werte gespeichert, die Praxis entscheidet. Der KI-Hinweis steht wörtlich dabei.
-4. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos). Preise erst, wenn festgelegt.
+4. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Markt in einer eigenen Zeile, darunter „Preise inkl. MwSt.“; kein „% sparen“, kein Hervorheben eines Abos.
+
+   | Markt | Monatlich | Jährlich |
+   |---|---|---|
+   | Deutschland und Österreich | 4,99 € | 49,99 € |
+   | Schweiz | CHF 4.00 | CHF 40.00 |
+
+   Frappies gibt es nur in diesen drei Ländern. Der Preis wird nicht nach Standort ausgewählt: Die Stores rechnen nach dem Land des Store-Kontos ab, nicht nach dem Ort der Besucherin.
 5. **Abschluss** mit dem ruhenden Hund und einem zweiten Primärbutton (der erste ist außer Sicht; pro Viewport einer).
 
 **Typografie:** Display XL/L für Überschriften, Prose 18/28 für Fließtext, Lesemaß 68ch. Keine Dachzeilen, keine Kicker, keine nummerierten Sektionen.
@@ -68,7 +75,7 @@ Modus: Überzeugen, in sechs Sekunden.
 - **Name:** Frappies. Untertitel: „Die Gesundheitsakte für deinen Hund“.
 - **Screenshots:** echte Bildschirme auf Kleeboden oder Kleeschale, Gerät ohne Rahmen oder mit flachem Tintenrahmen, eine Zeile Display 32 pro Bild, der Satzteil mit dem Nutzen in Filz nur auf der Schale. Höchstens einmal eine Illustration (Zoomie auf dem ersten Bild). Keine Sterne, keine „Nr. 1“-Behauptungen, keine Pfeile.
 - **Reihenfolge der Bilder:** Home mit Ball und Zahl, Akte eines Hundes, Befund scannen mit Hinweisbanner sichtbar, Erinnerungen, Dunkelmodus.
-- **Beschreibung:** Du-Form, dieselben Glossarbegriffe, der KI-Hinweis sinngemäß im Text. Keine Preise, bis festgelegt.
+- **Beschreibung:** Du-Form, dieselben Glossarbegriffe, der KI-Hinweis sinngemäß im Text. Preise nur mit den Werten aus dem Abschnitt Website.
 - **Berechtigungstexte:** sagen, wofür („Frappies nutzt die Kamera, damit du Fotos deines Hundes machen und Befunde scannen kannst.“).
 
 ## Social
@@ -103,3 +110,9 @@ Verworfen: Ein 96-px-Hero (andere Marke), Schatten auf Hover (verletzt „Tonal 
 Kontext: Website und Social könnten Hundefotos wollen.
 Entscheidung: Der Frappies-Hund ist gezeichnet. Fotos erscheinen nur als Inhalt der Nutzerin (ihr eigener Hund in ihrer Akte), nie als Markenmittel.
 Offen: Wenn Fotografie je gewünscht wird, bekommt sie ein eigenes Kapitel mit Stil, Licht und Rechten. Bis dahin keine.
+
+### 2026-10-20: Premium-Preise
+Kontext: Die Landingpage (namelessjames/frappies-web#6) soll Premium sachlich erklären; bisher galt „Preise erst, wenn festgelegt“. Die Preise sind jetzt festgelegt, und Frappies erscheint nur in Deutschland, Österreich und der Schweiz. Fall 2 (Weiterentwicklung einer bestehenden Regel).
+Entscheidung: Deutschland und Österreich 4,99 € monatlich, 49,99 € jährlich; Schweiz CHF 4.00 monatlich, CHF 40.00 jährlich, inkl. MwSt. Die Website zeigt beide Märkte als feste Zeilen, ohne Sparprozente.
+Verworfen: Keine Preise bis zum Start (Premium bliebe vage, obwohl die Preise feststehen). Preis nach Standort (braucht einen Server pro Seitenaufruf, frappies-web ADR 0001, und zeigt Reisenden oder VPN-Nutzern den falschen Preis, weil die Stores nach Konto-Land abrechnen).
+Web: namelessjames/frappies-web#6.
