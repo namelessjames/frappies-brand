@@ -16,10 +16,11 @@ Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, da
 
 **Struktur, die zur Marke passt:**
 
-1. **Hero auf der Kleeschale**, genau wie Home: Wortmarke in Filz oben links, Display XL mit genau einem Satzteil in Filz, die Zoomie-Shell-Illustration läuft rechts aus dem Bild. Ein Primärbutton. Die Schale endet in 28-px-Unterecken.
-2. **Danach Kleeboden** mit weißen Karten, die echte App-Inhalte zeigen: eine Hundekarte mit Ball, eine Akten-Zelle, ein Zeit-Chip in Orange. Die Website zeigt das Produkt, nicht Symbole für das Produkt.
-3. **Privatsphäre und KI** als eigene Sektion, in der Schärfe aus [08 Sprache](08-sprache.md): Bilder flüchtig, nur Werte gespeichert, die Praxis entscheidet. Der KI-Hinweis steht wörtlich dabei.
-4. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Markt in einer eigenen Zeile, darunter „Preise inkl. MwSt.“; kein „% sparen“, kein Hervorheben eines Abos.
+1. **Hero auf der Kleeschale**, genau wie Home: Wortmarke in Filz oben links, Display Hero mit genau einem Satzteil in Filz, rechts der Hund im Zettelhaufen (`papers-shell`). Ein Primärbutton. Die Schale endet in 28-px-Unterecken.
+2. **Die Hundewiese** direkt unter der Schale: Hecke am Horizont, darauf die Ballskala als Entfernung. Heute nah und groß mit dem orangen Zeit-Chip, diese Woche in der Mitte, später klein an der Hecke, jeweils mit einer weißen Karte.
+3. **Danach Kleeboden** mit weißen Karten, die echte App-Inhalte zeigen: eine Hundekarte mit Ball, eine Akten-Zelle, ein Zeit-Chip in Orange. Die Website zeigt das Produkt, nicht Symbole für das Produkt.
+4. **Privatsphäre und KI** als eigene Sektion auf dunklem Grund (Klasse `dark`), in der Schärfe aus [08 Sprache](08-sprache.md): Bilder flüchtig, nur Werte gespeichert, die Praxis entscheidet. Der KI-Hinweis steht wörtlich dabei, jeder Beispielausgabe ihr eigener.
+5. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Markt in einer eigenen Zeile, darunter „Preise inkl. MwSt.“; kein „% sparen“, kein Hervorheben eines Abos.
 
    | Markt | Monatlich | Jährlich |
    |---|---|---|
@@ -27,7 +28,7 @@ Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, da
    | Schweiz | CHF 4.00 | CHF 40.00 |
 
    Frappies gibt es nur in diesen drei Ländern. Der Preis wird nicht nach Standort ausgewählt: Die Stores rechnen nach dem Land des Store-Kontos ab, nicht nach dem Ort der Besucherin.
-5. **Abschluss** mit dem ruhenden Hund und einem zweiten Primärbutton (der erste ist außer Sicht; pro Viewport einer).
+6. **Abschluss** mit dem ruhenden Hund und einem zweiten Primärbutton (der erste ist außer Sicht; pro Viewport einer).
 
 **Vor dem Start:** Solange die App in keinem Store steht, hat die Website keinen Primärbutton. An der Stelle beider Buttons steht die Startzeile in Prose: „Ab Januar 2027 für iPhone und Android in Deutschland, Österreich und der Schweiz.“ Keine Warteliste, kein Formular, kein „Bescheid geben“-Link, kein deaktivierter Button. Mit den Store-Links kommen die Buttons zurück.
 
@@ -124,3 +125,9 @@ Kontext: Die Website geht vor der App online (namelessjames/frappies-web#6). Die
 Entscheidung: Bis zu den Store-Links kein Primärbutton; die Startzeile steht an seiner Stelle. Der Filz bleibt dem Satzteil im Hero und dem Ball vorbehalten.
 Verworfen: Bescheid per E-Mail (sammelt Adressen, die niemand verwalten will), Anmeldeformular (braucht einen Server, frappies-web ADR 0001), ein Button, der nur nach unten springt (Filz ohne nächsten Schritt verletzt „Felt Means Next“), ein deaktivierter Button (wirkt kaputt).
 Web: namelessjames/frappies-web#6.
+
+### 2026-10-21: Landing Page mit Zettelhaufen und Hundewiese
+Kontext: Der Inhaber fand die Landing Page langweilig und wollte sie mit den Illustrationen lebendiger. Aus drei Strukturen und drei Kombinationen gewählt: oben der Zettelhaufen, darunter die Hundewiese. Fall 2 (die Struktur der Website ändert sich).
+Entscheidung: Hero mit „Weniger Zettel, mehr Zeit für deinen Hund.“ und dem Hund im Zettelhaufen; die frühere Hero-Zeile schließt jetzt die Seite. Die Hundewiese zeigt die Ballskala als Tiefe, mit Zoomer als Beispielhund. Jeder Abschnitt hat seine Pose (Tag bei den Hunden, Lead bei der Akte, Sniffing beim Befund, Bowl beim Futterplan, Ball bei Premium, Resting am Schluss). Die KI-Sektion liegt dunkel, jede Beispielausgabe trägt ihren KI-Hinweis wörtlich. Bewegung: ein Moment beim Laden, der Hero auf `motion.spring.hero`, dann landen die Dinge auf der Wiese von hinten nach vorn auf `motion.spring.entry`; unter Reduced Motion steht alles.
+Verworfen: der Hundecomic (Panels kippen schnell in ein Kartenraster), die Wiese als Hero (das Zettel-Bild trägt den Einstieg stärker), eine durchgehende Szene mit fliegenden Bällen (zu viel Filz als Dekoration).
+Web: namelessjames/frappies-web, Landing-Redesign (PR folgt).

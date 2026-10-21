@@ -1,9 +1,9 @@
 {
-  "prompt": "Derived from bowl.png (gpt-image generation, prompt in bowl.png.json) by a deterministic pixel pass: each pixel unmixed into ink/white/felt, white coat made transparent, clover ink #14301F recoloured to light #F2F4EC, felt chartreuse kept. For use on the dark clover shell and dark-mode grounds.",
-  "createdAt": "2026-10-11T07:09:14.000Z",
-  "tool": "derived (python PIL/numpy unmix pass)",
-  "derivedFrom": "assets/images/illustrations/bowl.png",
-  "transform": "white -> transparent; ink #14301F -> #F2F4EC; felt kept",
+  "prompt": "Derived from bowl.png (gpt-image generation, prompt in bowl.png.json) by a deterministic pixel pass for dark ground: the white coat stays opaque white, inner ink stays #14301F, ink touching the transparent outside (silhouette, motion marks) is recoloured to chalk #F2F4EC. Same treatment as papers-shell.png; owner decision 2026-10-21. Replaces the earlier transparent-coat shell variant.",
+  "createdAt": "2026-10-21T18:30:00.000Z",
+  "tool": "derived (python PIL/numpy edge pass)",
+  "derivedFrom": "assets/illustrations/bowl.png",
+  "transform": "silhouette ink -> #F2F4EC; inner ink and white kept; felt kept",
   "background": "transparent",
   "outputFormat": "png"
 }

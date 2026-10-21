@@ -18,6 +18,7 @@ In der App heißen die Dateien `BricolageGrotesque_800ExtraBold`, `BricolageGrot
 
 | Stil | Token | Schrift | Größe / Zeile | Gewicht | Laufweite | Einsatz |
 |---|---|---|---|---|---|---|
+| Display Hero | `type.display-hero` | Bricolage | 72 / 72 | 800 | -0.035em | Nur Landing-Hero der Website, ab 1024 px. Erweiterung |
 | Display XL | `type.display-xl` | Bricolage | 56 / 60 | 800 | -0.03em | Web-Hero. Erweiterung |
 | Display L | `type.display-l` | Bricolage | 44 / 48 | 800 | -0.03em | Web-Sektionstitel. Erweiterung |
 | Display | `type.display` | Bricolage | 32 / 36 | 800 | -0.025em | Home-Überschrift (Zahl in Filz), Hundename auf dem Hero, Leerzustand-Titel |
@@ -67,3 +68,11 @@ Die App kennt keine Größe über 32 px. Für Website und Marketing erweitert di
 ```
 
 Für die Produktion selbst hosten (WOFF2, `font-display: swap`); die OFL erlaubt es. Bricolage ist eine variable Schrift mit optischer Größe; `font-optical-sizing: auto` lassen.
+
+## Entscheidungen
+
+### 2026-10-21: Display Hero für die Landing Page
+Kontext: Der gewählte Entwurf der Landing Page setzt die Hero-Zeile mit 53 px Versalhöhe, das sind 72 px Bricolage 800. Display XL (56 px) trägt die Zeile „Weniger Zettel, mehr Zeit für deinen Hund.“ nicht mit der Wucht des Entwurfs. Fall 2 (Weiterentwicklung der Web-Typoskala).
+Entscheidung: `type.display-hero` 72/72, 800, -0.035em, nur für den Hero der Landing Page ab 1024 px. Darunter Display XL, auf dem Telefon Display L. Die App nutzt sie nicht.
+Verworfen: Display XL auf 72 px anheben (ändert jede Website-Überschrift), freie Größe im Code (umgeht die Tokens).
+Web: namelessjames/frappies-web, Landing-Redesign (PR folgt).

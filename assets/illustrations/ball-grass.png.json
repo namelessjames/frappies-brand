@@ -1,0 +1,13 @@
+{
+  "prompt": "Hand-drawn editorial illustration in exactly the style of the reference sheet: loose, confident brush-pen ink line of one even weight, slightly wobbly organic strokes, a few flat solid fill shapes, no shading, no gradients, no texture, no ground shadow. Exactly two colours: line work in deep clover green-black #14301F and flat fills in tennis-ball felt chartreuse #D9EE52. Fully transparent background, the subject isolated with generous empty margin.\n\nSubject: a single tennis ball lying in the grass, drawn as a round flat chartreuse #D9EE52 fill with a loose ink outline and one curved white seam line, a few short ink strokes of grass tufts around its base. No dog. Square composition, ball centred.\n",
+  "createdAt": "2026-10-21T15:05:19.808Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "assets/illustrations/zoomie.png",
+    "frappies-web .impeccable/build/crops/ball-today.png (crop of the approved website comp)"
+  ],
+  "postprocess": "transparent margin trimmed to a 16-24px pad, scaled to 720px wide"
+}

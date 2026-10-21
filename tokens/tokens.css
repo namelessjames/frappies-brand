@@ -33,6 +33,11 @@
   --font-body: Figtree, system-ui, sans-serif;
   --font-email: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
+  --type-display-hero-family: var(--font-display);
+  --type-display-hero-size: 72px;
+  --type-display-hero-weight: 800;
+  --type-display-hero-leading: 72px;
+  --type-display-hero-tracking: -0.035em;
   --type-display-xl-family: var(--font-display);
   --type-display-xl-size: 56px;
   --type-display-xl-weight: 800;
