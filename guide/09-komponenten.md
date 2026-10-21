@@ -108,3 +108,13 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 - **Caret:** `brand`. **Scrollbar:** schmal, Heckenlinie auf transparent.
 - **Inline-Code, Tabellenzahlen:** Figtree mit `tabular-nums`, keine Monospace.
 - **Navigation der Website:** Wortmarke links (Filz auf der Schale, Tinte auf Boden), höchstens fünf Ziele, ein Primärbutton („App laden“ oder was der Store erlaubt).
+- **Sprachwechsel:** ein Textlink mit dem Namen der anderen Sprache in ihrer Sprache („English“ auf Deutsch, „Deutsch“ auf Englisch), mit `lang`-Attribut, rechts in der Navigation. Keine Flaggen, keine automatische Umleitung.
+- **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, AGB, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
+
+## Entscheidungen
+
+### 2026-10-21: Sprachwechsel und Fußzeile der Website
+Kontext: Die Landingpage (namelessjames/frappies-web#6) braucht einen Weg zur englischen Seite und auf jeder Seite einen Link zum Impressum. Beides deckte die Marke nicht ab. Fall 1 (neue Komponente).
+Entscheidung: Sprachwechsel als Textlink mit dem Sprachnamen in der Zielsprache; Fußzeile auf Kleeboden, Meta in Salbei, nur Rechts- und Hilfelinks und die Kontaktadresse.
+Verworfen: Flaggen (Sprache ist kein Land; Schweiz und Österreich sprechen Deutsch), Umleitung nach Browsersprache (braucht einen Server, frappies-web ADR 0001), Fußzeile auf der Kleeschale (eine zweite Schale nimmt dem Hero das Gewicht).
+Web: namelessjames/frappies-web#6.
