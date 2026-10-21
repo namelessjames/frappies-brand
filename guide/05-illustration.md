@@ -35,7 +35,7 @@ Alle Posen sind so beschnitten, dass sie etwa gleich hoch stehen. Seitenverhält
 
 Jede Pose hat eine `*-shell.png`: helle Linie (Kreide), Fell ausgespart, dieselben Filzflächen. Sie gehört auf die Kleeschale und auf jede dunkle Fläche, weil Tintenlinien dort verschwinden. In der App wählt `Illustration` im Dunkelmodus automatisch die Shell-Variante. Die Originale mit weißem Fell gehören auf Weiß und Kleeboden.
 
-Nie ein Original auf Dunkel, nie eine Shell-Variante auf Hell. Ausnahmen `papers-shell.png`, `sniffing-shell.png` und `bowl-shell.png`: Fell und Zettel bleiben weiß, nur die Außenlinie wird Kreide (siehe Entscheidungen unten).
+Nie ein Original auf Dunkel, nie eine Shell-Variante auf Hell. Ausnahmen `papers-shell.png`, `sniffing-shell.png`, `bowl-shell.png`, `tag-shell.png`, `lead-shell.png`, `ball-shell.png` und `resting-shell.png`: Fell und Zettel bleiben weiß, nur die Außenlinie wird Kreide (siehe Entscheidungen unten). Ausgespart bleiben nur noch `zoomie-shell.png` und `listening-shell.png`.
 
 Für die Website liegen unter `assets/illustrations/web/` WebP-Kopien (höchstens 1600 px breit, die Wiese 2880 px), aus den PNG erzeugt; die Website kopiert nur diese.
 
@@ -78,3 +78,8 @@ Kontext: Auf der Website stehen Sniffing und Bowl in der dunklen KI-Sektion, dir
 Entscheidung: `sniffing-shell.png` und `bowl-shell.png` bekommen dieselbe Behandlung wie `papers-shell.png`: Fell weiß, innere Linien Tinte, Außenlinie Kreide. Die übrigen Shell-Varianten bleiben vorerst ausgespart, bis die App entschieden hat.
 Verworfen: alle Shell-Varianten auf einmal umstellen (ändert jeden dunklen App-Zustand ohne Prüfung), nur die Website-Kopien ändern (die Website kopiert die Marke byte-genau).
 Web: namelessjames/frappies-web#13.
+
+### 2026-10-21: Tag, Lead, Ball und Resting auf Dunkel wie der Zettelhaufen
+Kontext: Im Dunkelmodus der Website stehen Tag, Lead, Ball und Resting noch mit ausgespartem Fell neben Sniffing und Bowl mit weißem Fell. Der Inhaber will alle Hunde der Website gleich. Fall 2 (bestehende Shell-Varianten ändern sich; die App nutzt sie im Dunkelmodus).
+Entscheidung: `tag-shell.png`, `lead-shell.png`, `ball-shell.png` und `resting-shell.png` bekommen dieselbe Behandlung: Fell weiß, innere Linien Tinte, Außenlinie Kreide. Zoomie und Listening folgen, wenn die App sie braucht.
+Verworfen: nur die Website-Kopien ändern (die Website kopiert die Marke byte-genau).
