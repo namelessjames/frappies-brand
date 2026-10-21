@@ -29,6 +29,8 @@ Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, da
    Frappies gibt es nur in diesen drei Ländern. Der Preis wird nicht nach Standort ausgewählt: Die Stores rechnen nach dem Land des Store-Kontos ab, nicht nach dem Ort der Besucherin.
 5. **Abschluss** mit dem ruhenden Hund und einem zweiten Primärbutton (der erste ist außer Sicht; pro Viewport einer).
 
+**Vor dem Start:** Solange die App in keinem Store steht, hat die Website keinen Primärbutton. An der Stelle beider Buttons steht die Startzeile in Prose: „Ab Januar 2027 für iPhone und Android in Deutschland, Österreich und der Schweiz.“ Keine Warteliste, kein Formular, kein „Bescheid geben“-Link, kein deaktivierter Button. Mit den Store-Links kommen die Buttons zurück.
+
 **Typografie:** Display XL/L für Überschriften, Prose 18/28 für Fließtext, Lesemaß 68ch. Keine Dachzeilen, keine Kicker, keine nummerierten Sektionen.
 
 **Was die Website nicht tut:** Stockfotos, Fotos fremder Hunde, Testimonials, Zahlen („10.000 Hunde“), Pressebalken, Store-Bewertungen, Verläufe, Glas, Parallax, hochzählende Zahlen, Filz als Sektionshintergrund, Orange für „Neu“.
@@ -115,4 +117,10 @@ Offen: Wenn Fotografie je gewünscht wird, bekommt sie ein eigenes Kapitel mit S
 Kontext: Die Landingpage (namelessjames/frappies-web#6) soll Premium sachlich erklären; bisher galt „Preise erst, wenn festgelegt“. Die Preise sind jetzt festgelegt, und Frappies erscheint nur in Deutschland, Österreich und der Schweiz. Fall 2 (Weiterentwicklung einer bestehenden Regel).
 Entscheidung: Deutschland und Österreich 4,99 € monatlich, 49,99 € jährlich; Schweiz CHF 4.00 monatlich, CHF 40.00 jährlich, inkl. MwSt. Die Website zeigt beide Märkte als feste Zeilen, ohne Sparprozente.
 Verworfen: Keine Preise bis zum Start (Premium bliebe vage, obwohl die Preise feststehen). Preis nach Standort (braucht einen Server pro Seitenaufruf, frappies-web ADR 0001, und zeigt Reisenden oder VPN-Nutzern den falschen Preis, weil die Stores nach Konto-Land abrechnen).
+Web: namelessjames/frappies-web#6.
+
+### 2026-10-21: Website vor dem Start
+Kontext: Die Website geht vor der App online (namelessjames/frappies-web#6). Die Primärbuttons führen in die Stores, die es dann noch nicht gibt. Fall 1 (neues Muster: ein Zustand, den die Marke nicht abdeckte).
+Entscheidung: Bis zu den Store-Links kein Primärbutton; die Startzeile steht an seiner Stelle. Der Filz bleibt dem Satzteil im Hero und dem Ball vorbehalten.
+Verworfen: Bescheid per E-Mail (sammelt Adressen, die niemand verwalten will), Anmeldeformular (braucht einen Server, frappies-web ADR 0001), ein Button, der nur nach unten springt (Filz ohne nächsten Schritt verletzt „Felt Means Next“), ein deaktivierter Button (wirkt kaputt).
 Web: namelessjames/frappies-web#6.
