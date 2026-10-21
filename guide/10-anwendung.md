@@ -18,7 +18,7 @@ Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, da
 
 1. **Hero auf der Kleeschale**, genau wie Home: Wortmarke in Filz oben links, Display Hero mit genau einem Satzteil in Filz, rechts der Hund im Zettelhaufen (`papers-shell`). Ein Primärbutton. Die Schale endet in 28-px-Unterecken.
 2. **Die Hundewiese** direkt unter der Schale: Hecke am Horizont, darauf die Ballskala als Entfernung. Heute nah und groß mit dem orangen Zeit-Chip, diese Woche in der Mitte, später klein an der Hecke, jeweils mit einer weißen Karte.
-3. **Danach Kleeboden** mit weißen Karten, die echte App-Inhalte zeigen: eine Hundekarte mit Ball, eine Akten-Zelle, ein Zeit-Chip in Orange. Die Website zeigt das Produkt, nicht Symbole für das Produkt.
+3. **Danach Kleeboden** mit echten App-Bildschirmen im Gerät (siehe „Gerät auf der Website“): der Steckbrief des Hundes, die Gesundheitsakte, die KI-Ergebnisse. Die Website zeigt das Produkt, nicht Symbole für das Produkt.
 4. **Privatsphäre und KI** als eigene Sektion auf dunklem Grund (Klasse `dark`), in der Schärfe aus [08 Sprache](08-sprache.md): Bilder flüchtig, nur Werte gespeichert, die Praxis entscheidet. Der KI-Hinweis steht wörtlich dabei, jeder Beispielausgabe ihr eigener.
 5. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Markt in einer eigenen Zeile, darunter „Preise inkl. MwSt.“; kein „% sparen“, kein Hervorheben eines Abos.
 
@@ -31,6 +31,8 @@ Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, da
 6. **Abschluss** mit dem ruhenden Hund und einem zweiten Primärbutton (der erste ist außer Sicht; pro Viewport einer).
 
 **Vor dem Start:** Solange die App in keinem Store steht, hat die Website keinen Primärbutton. An der Stelle beider Buttons steht die Startzeile in Prose: „Ab Januar 2027 für iPhone und Android in Deutschland, Österreich und der Schweiz.“ Keine Warteliste, kein Formular, kein „Bescheid geben“-Link, kein deaktivierter Button. Mit den Store-Links kommen die Buttons zurück.
+
+**Gerät auf der Website:** Ein App-Bildschirm steht in einem iPhone in den Proportionen des aktuellen Modells (393 × 852 pt, Dynamic Island), gezeichnet wie die Illustrationen auf der Schale: flacher Tintenkörper mit 1,5-px-Kreidekante, keine Spiegelung, kein Schatten, kein Verlauf. Die Radien des Geräts sind die des Geräts, keine UI-Radien. Der Bildschirm zeigt die App in Punktgröße, skaliert, mit Statusleiste, schwebendem Header und Tab-Leiste, nie einen Ausschnitt ohne Rahmen. Das Gerät darf leicht in Perspektive liegen (bis 12° um die Hochachse, bis 4° um die Querachse), statisch; es bewegt sich nicht mit dem Scrollen. KI-Ergebnisse im Gerät sind echte Ausgaben des App-Modells mit den App-Prompts, unverändert, mit ihrem Hinweis, und die Bildunterschrift sagt das.
 
 **Typografie:** Display XL/L für Überschriften, Prose 18/28 für Fließtext, Lesemaß 68ch. Keine Dachzeilen, keine Kicker, keine nummerierten Sektionen.
 
@@ -131,3 +133,10 @@ Kontext: Der Inhaber fand die Landing Page langweilig und wollte sie mit den Ill
 Entscheidung: Hero mit „Weniger Zettel, mehr Zeit für deinen Hund.“ und dem Hund im Zettelhaufen; die frühere Hero-Zeile schließt jetzt die Seite. Die Hundewiese zeigt die Ballskala als Tiefe, mit Zoomer als Beispielhund. Jeder Abschnitt hat seine Pose (Tag bei den Hunden, Lead bei der Akte, Sniffing beim Befund, Listening bei der Erkrankungs-Info, Bowl beim Futterplan, Ball bei Premium, Resting am Schluss). Die KI-Sektion liegt dunkel, jede Beispielausgabe trägt ihren KI-Hinweis wörtlich. Bewegung: ein Moment beim Laden, der Hero auf `motion.spring.hero`, dann landen die Dinge auf der Wiese von hinten nach vorn auf `motion.spring.entry`; unter Reduced Motion steht alles.
 Verworfen: der Hundecomic (Panels kippen schnell in ein Kartenraster), die Wiese als Hero (das Zettel-Bild trägt den Einstieg stärker), eine durchgehende Szene mit fliegenden Bällen (zu viel Filz als Dekoration).
 Web: namelessjames/frappies-web#13.
+
+### 2026-10-21: Gerät auf der Website
+Kontext: Die Landing Page zeigte App-Inhalte als freistehende Karten; der Inhaber wollte die Beispiele in einem echten iPhone 16 mit Perspektive und die KI-Beispiele als echte KI-Ergebnisse. Die Marke kannte ein Gerät nur für Store-Screenshots („ohne Rahmen oder mit flachem Tintenrahmen“). Fall 1 (neues Muster, das die Marke nicht abdeckte).
+Entscheidung: Das Gerät wie oben unter „Gerät auf der Website“: flacher Tintenkörper mit Kreidekante in den Proportionen des iPhone 16, statische Perspektive, der Bildschirm als nachgebaute App in Punktgröße. KI-Ergebnisse sind echte Ausgaben von `gpt-4o` mit den Prompts der App-Funktionen, für den Beispielhund Zoomer erzeugt und unverändert gezeigt; die Website hält Modell, Prompt-Quelle und Datum fest.
+Verworfen: Foto-Mockup mit Spiegelung und Schatten (zweiter Bildstil, verletzt „Tonal Step“), Bildschirm ohne Rahmen (liest sich als Website-Karte, nicht als App), Parallax beim Scrollen (ausgeschlossen unter „Was die Website nicht tut“), erfundene KI-Texte (die Website soll zeigen, was die App wirklich ausgibt).
+Web: namelessjames/frappies-web (PR folgt).
+
