@@ -75,4 +75,4 @@ Für die Produktion selbst hosten (WOFF2, `font-display: swap`); die OFL erlaubt
 Kontext: Der gewählte Entwurf der Landing Page setzt die Hero-Zeile mit 53 px Versalhöhe, das sind 72 px Bricolage 800. Display XL (56 px) trägt die Zeile „Weniger Zettel, mehr Zeit für deinen Hund.“ nicht mit der Wucht des Entwurfs. Fall 2 (Weiterentwicklung der Web-Typoskala).
 Entscheidung: `type.display-hero` 72/72, 800, -0.035em, nur für den Hero der Landing Page ab 1024 px. Darunter Display XL, auf dem Telefon Display L. Die App nutzt sie nicht.
 Verworfen: Display XL auf 72 px anheben (ändert jede Website-Überschrift), freie Größe im Code (umgeht die Tokens).
-Web: namelessjames/frappies-web, Landing-Redesign (PR folgt).
+Web: namelessjames/frappies-web#13.

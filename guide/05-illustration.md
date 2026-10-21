@@ -71,10 +71,10 @@ Kein Stock-Hundebild, kein zweiter Illustrationsstil, keine Fotografie als Ersat
 Kontext: Die Landing Page war zu brav (namelessjames/frappies-web, Landing-Redesign). Der gewählte Entwurf öffnet auf dem Zettelchaos, das jede Hundehalterin kennt, und löst es auf der Hundewiese auf, wo Dringlichkeit Entfernung ist. Dafür fehlten eine Pose und zwei Requisiten. Fall 2 (bestehende Regeln ändern sich: Text in der Zeichnung, Shell-Variante mit weißem Fell, die Wiese als Fläche unter App-Karten).
 Entscheidung: Neue Pose `papers.png` (Hund schnüffelt im Zettelhaufen) mit dem Stil-Prompt und `zoomie.png`/`sniffing.png` als Vorlage. Auf ihren Requisiten stehen drei handgeschriebene Wörter (Impfpass, Wurmkur??, Blutbild) in derselben Tuschlinie; sie erzählen das Chaos, sonst bleibt Text aus Zeichnungen draußen. `papers-shell.png` behält auf Wunsch des Inhabers Fell und Zettel weiß und färbt nur die Außenlinie in Kreide, damit der Hund auf der Schale wie im Entwurf steht. `meadow.png` ist die Wiese als reine Linie; auf ihr stehen nur die Karten der Ballskala, nie Fließtext. `ball-grass.png` ist der Ball der Ballskala als Zeichnung, nur auf der Wiese; in der App bleibt der Ball die Komponente. Tinte auf Filz bleibt Tinte auch in den Shell-Varianten.
 Verworfen: Shell-Variante mit ausgespartem Fell (der Inhaber wollte die Linien dunkel und die Flächen weiß), Wörter als HTML über der Zeichnung (bricht beim Skalieren auseinander), ein Foto echter Zettel (zweiter Bildstil), die Wiese als Muster hinter Text (verletzt „Wo nicht“).
-Web: namelessjames/frappies-web, Landing-Redesign (PR folgt).
+Web: namelessjames/frappies-web#13.
 
 ### 2026-10-21: Sniffing und Bowl auf Dunkel wie der Zettelhaufen
 Kontext: Auf der Website stehen Sniffing und Bowl in der dunklen KI-Sektion, direkt nach dem Hero mit `papers-shell.png`. Zwei Behandlungen desselben Hundes auf demselben Grund wirkten wie zwei Hunde. Fall 2 (bestehende Shell-Varianten ändern sich; die App nutzt sie im Dunkelmodus).
 Entscheidung: `sniffing-shell.png` und `bowl-shell.png` bekommen dieselbe Behandlung wie `papers-shell.png`: Fell weiß, innere Linien Tinte, Außenlinie Kreide. Die übrigen Shell-Varianten bleiben vorerst ausgespart, bis die App entschieden hat.
 Verworfen: alle Shell-Varianten auf einmal umstellen (ändert jeden dunklen App-Zustand ohne Prüfung), nur die Website-Kopien ändern (die Website kopiert die Marke byte-genau).
-Web: namelessjames/frappies-web, Landing-Redesign.
+Web: namelessjames/frappies-web#13.
