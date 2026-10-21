@@ -18,7 +18,7 @@ Hundewiese am Nachmittag. One idea: the tennis ball sits on the next thing your 
 - **Ink on felt.** Text or icons on `primary` are always `primary-foreground` (#14301F), in both themes. White or green on felt is a defect.
 - **Frisbee is due.** `warning` fill only on items due today or overdue, with `warning-foreground` text. Never for categories, emphasis or calls to action. Orange as text on light surfaces is `warning-ink`.
 - **One ramp.** Every neutral comes from the clover ramp in `tokens.json`. No `#888`, no `gray-500`, no `rgba(0,0,0,x)` tints except the one FAB shadow.
-- **Two radii.** 14px (`radius.control`) for things you operate, 18px (`radius.card`) for things you read. 28px only on the bottom of the Home shell. Full circles only for the ball, avatars, chips, the active tab pill, round icon buttons. Never a pill-shaped button.
+- **Two radii.** 14px (`radius.control`) for things you operate, 18px (`radius.card`) for things you read. 28px only on the bottom of the Home shell and, on the website, on all four corners of an inset section surface (Mist or Shell set into the ground, see `guide/04-form-und-raum.md`, "Eingelassene Flächen"). Full circles only for the ball, avatars, chips, the active tab pill, round icon buttons. Never a pill-shaped button.
 - **Tonal depth.** No shadows on cards. Separation is one step on the clover ramp. The only shadow in the system is `shadow.fab`.
 - **Heavy headline.** Headlines, counts and figures are Bricolage Grotesque 700/800. Paragraphs, labels and controls are Figtree. Never a paragraph in Bricolage, never an important figure in Figtree.
 - **No bare count.** A number always sits next to what it counts (count + label + latest entry).

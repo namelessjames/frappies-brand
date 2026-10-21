@@ -10,7 +10,7 @@ Zwei Radien tragen das System.
 |---|---|---|
 | `radius.control` | 14 px | Dinge, die man bedient: Buttons, Felder, Auswahl-Chips, Banner |
 | `radius.card` | 18 px | Dinge, die man liest: Karten, Akten-Zellen, Hero-Karten |
-| `radius.shell` | 28 px | Nur die unteren Ecken der Home-Schale |
+| `radius.shell` | 28 px | Die unteren Ecken der Home-Schale; im Web alle vier Ecken einer eingelassenen Fläche (siehe „Eingelassene Flächen“) |
 | `radius.pill` | voll | Ball, Avatare, Hunde-Chips, aktive Tab-Pille, runde 44-px-Icon-Buttons |
 | `radius.nested-sm` | 6 px | Zeit-Chip, Hundename-Tag in einer Zeile. Nur verschachtelt |
 | `radius.nested-md` | 10 px | Auswahl-Chips im Raster, Foto-Thumbnails. Nur verschachtelt |
@@ -96,3 +96,13 @@ Die Website bekommt, was die App nicht braucht: Breakpoints und einen Container.
 - Sektionsrhythmus 48 px (Telefon) bis 80 px (Desktop) zwischen Sektionen; innerhalb einer Sektion 16 bis 32 px.
 - Die Kleeschale darf als Hero-Fläche ganz oben stehen, mit 28-px-Unterecken, genau wie auf Home. Danach Kleeboden mit weißen Karten.
 - Karten im Web bleiben randlos und schattenlos. Hover hebt nicht; Hover ändert höchstens die Tonstufe (`card` → `accent`) oder unterstreicht den Link.
+
+**Eingelassene Flächen (Erweiterung).** Eine Sektion, die eine Tonstufe tiefer liegt als der Kleeboden (Kleedunst `accent` oder die Kleeschale `shell`), steht im Web nicht als Band von Rand zu Rand, sondern als eingelassene Fläche auf dem Boden: vom Seitenrand um den Rand eingerückt (16 px Telefon, 32 px ab 768 px), alle vier Ecken `radius.shell`, der Inhalt darin im Container mit dem gewohnten Sektionsrhythmus. Zwischen zwei Flächen bleiben 80 px Kleeboden (48 px auf dem Telefon). Die Fläche ist die Stufe; es gibt keinen Verlauf, keinen Schatten und keine Linie am Übergang. Die Hero-Schale bleibt die Ausnahme: sie läuft oben bis an den Rand und endet mit 28-px-Unterecken.
+
+## Entscheidungen
+
+### 2026-10-21: Eingelassene Flächen im Web
+Kontext: Auf der Landing Page (namelessjames/frappies-web) lagen Akte (Kleedunst) und KI-Sektion (dunkel) als Bänder von Rand zu Rand mit harten Kanten; die Seite las sich als flacher, gedrängter Stapel, obwohl „Tonal Step“ Tiefe verspricht. Verläufe und Schatten sind ausgeschlossen, der Radius war auf die Unterecken der Home-Schale beschränkt. Fall 2 (eine bestehende Regel, die Ausnahme für `radius.shell`, wird erweitert).
+Entscheidung: Tiefere Tonstufen stehen im Web als eingelassene Flächen mit `radius.shell` an allen vier Ecken auf dem Kleeboden, eingerückt um den Seitenrand, mit 80 px Boden zwischen zwei Flächen. Die Hero-Schale bleibt oben randlos mit Unterecken. In der App ändert sich nichts.
+Verworfen: Schatten oder Verlauf am Übergang (verletzt „Tonal Step“), 18 px auf der Fläche (der Kartenradius macht eine Sektion zur Riesenkarte), gezeichnete Hecken als Trenner zwischen jeder Sektion (die Hecke bleibt der Horizont der Wiese), eine zweite randlose Schale (die Fußzeilen-Entscheidung in 09 gilt: ein zweites Band nimmt dem Hero das Gewicht; eine eingelassene Fläche weiter unten konkurriert nicht mit ihm).
+Web: namelessjames/frappies-web (PR folgt).

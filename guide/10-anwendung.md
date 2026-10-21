@@ -18,8 +18,8 @@ Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, da
 
 1. **Hero auf der Kleeschale**, genau wie Home: Wortmarke in Filz oben links, Display Hero mit genau einem Satzteil in Filz, rechts der Hund im Zettelhaufen (`papers-shell`). Ein Primärbutton. Die Schale endet in 28-px-Unterecken.
 2. **Die Hundewiese** direkt unter der Schale: Hecke am Horizont, darauf die Ballskala als Entfernung. Heute nah und groß mit dem orangen Zeit-Chip, diese Woche in der Mitte, später klein an der Hecke, jeweils mit einer weißen Karte.
-3. **Danach Kleeboden** mit weißen Karten, die echte App-Inhalte zeigen: eine Hundekarte mit Ball, eine Akten-Zelle, ein Zeit-Chip in Orange. Die Website zeigt das Produkt, nicht Symbole für das Produkt.
-4. **Privatsphäre und KI** als eigene Sektion auf dunklem Grund (Klasse `dark`), in der Schärfe aus [08 Sprache](08-sprache.md): Bilder flüchtig, nur Werte gespeichert, die Praxis entscheidet. Der KI-Hinweis steht wörtlich dabei, jeder Beispielausgabe ihr eigener.
+3. **Danach Kleeboden** mit weißen Karten, die echte App-Inhalte zeigen: eine Hundekarte mit Ball, eine Akten-Zelle, ein Zeit-Chip in Orange. Die Website zeigt das Produkt, nicht Symbole für das Produkt. Die Akte steht auf Kleedunst, als eingelassene Fläche ([04 Form und Raum](04-form-und-raum.md), „Eingelassene Flächen“).
+4. **Privatsphäre und KI** als eigene Sektion auf dunklem Grund (Klasse `dark`), ebenfalls eingelassen, in der Schärfe aus [08 Sprache](08-sprache.md): Bilder flüchtig, nur Werte gespeichert, die Praxis entscheidet. Der KI-Hinweis steht wörtlich dabei, jeder Beispielausgabe ihr eigener.
 5. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Markt in einer eigenen Zeile, darunter „Preise inkl. MwSt.“; kein „% sparen“, kein Hervorheben eines Abos.
 
    | Markt | Monatlich | Jährlich |
