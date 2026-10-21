@@ -83,3 +83,4 @@ Web: namelessjames/frappies-web#13.
 Kontext: Im Dunkelmodus der Website stehen Tag, Lead, Ball und Resting noch mit ausgespartem Fell neben Sniffing und Bowl mit weißem Fell. Der Inhaber will alle Hunde der Website gleich. Fall 2 (bestehende Shell-Varianten ändern sich; die App nutzt sie im Dunkelmodus).
 Entscheidung: `tag-shell.png`, `lead-shell.png`, `ball-shell.png` und `resting-shell.png` bekommen dieselbe Behandlung: Fell weiß, innere Linien Tinte, Außenlinie Kreide. Zoomie und Listening folgen, wenn die App sie braucht.
 Verworfen: nur die Website-Kopien ändern (die Website kopiert die Marke byte-genau).
+Web: namelessjames/frappies-web#15.
