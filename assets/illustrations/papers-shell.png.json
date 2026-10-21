@@ -1,0 +1,9 @@
+{
+  "prompt": "Derived from papers.png (gpt-image generation, prompt in papers.png.json) by a deterministic pixel pass for the dark clover shell: the white coat and white papers stay opaque white, inner ink stays #14301F, ink touching the transparent outside (the silhouette and the sniff marks) is recoloured to chalk #F2F4EC so the outline reads on dark. Owner request 2026-10-21: dark lines, white fill on the website hero.",
+  "createdAt": "2026-10-21T16:10:00.000Z",
+  "tool": "derived (python PIL/numpy edge pass)",
+  "derivedFrom": "assets/illustrations/papers.png",
+  "transform": "silhouette ink -> #F2F4EC; inner ink and white kept; felt kept",
+  "background": "transparent",
+  "outputFormat": "png"
+}

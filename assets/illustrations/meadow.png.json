@@ -1,0 +1,13 @@
+{
+  "prompt": "Hand-drawn editorial illustration in the loose, confident brush-pen ink style of the reference: one even, slightly wobbly ink line in deep clover green-black #14301F only, no fills, no shading, no gradients, no text. Fully transparent background. Subject: a very wide, shallow dog meadow seen in gentle depth. Along the top edge a continuous low hedge of scribbly bushes running edge to edge as the horizon, drawn densely; below it, open ground with sparse small grass tufts, smaller and lighter near the hedge, bigger and bolder towards the bottom edge, with a few larger tufts at the lower left and lower right corners. Leave the middle of the ground mostly empty so cards can sit on it. No dogs, no balls, no objects. Match the composition of the second reference image without its balls and cards.\n",
+  "createdAt": "2026-10-21T15:05:47.257Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "assets/illustrations/zoomie.png",
+    "frappies-web .impeccable/build/crops/meadow.png (crop of the approved website comp)"
+  ],
+  "postprocess": "transparent margin trimmed to a 16-24px pad"
+}

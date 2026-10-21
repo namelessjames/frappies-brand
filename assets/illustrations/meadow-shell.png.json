@@ -1,0 +1,9 @@
+{
+  "prompt": "Derived from meadow.png (gpt-image generation, prompt in meadow.png.json) by a deterministic pixel pass: each pixel unmixed into ink/white/felt, white coat made transparent, clover ink #14301F recoloured to light #F2F4EC, felt chartreuse kept; ink enclosed by felt (lettering, the paw, the ball seam) stays #14301F (Ink On Felt).",
+  "createdAt": "2026-10-21T15:40:00.000Z",
+  "tool": "derived (python PIL/numpy unmix pass)",
+  "derivedFrom": "assets/illustrations/meadow.png",
+  "transform": "white -> transparent; ink #14301F -> #F2F4EC except where enclosed by felt; felt kept",
+  "background": "transparent",
+  "outputFormat": "png"
+}

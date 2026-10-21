@@ -1,0 +1,14 @@
+{
+  "prompt": "Hand-drawn editorial illustration in exactly the style of the reference sheet: loose, confident brush-pen ink line of one even weight, slightly wobbly organic strokes, a few flat solid fill shapes, no shading, no gradients, no texture, no ground shadow. Exactly two colours: line work in deep clover green-black #14301F and flat fills in tennis-ball felt chartreuse #D9EE52. Fully transparent background, the subject isolated with generous empty margin.\n\nSubject: a scruffy medium-sized mixed-breed dog standing at three-quarter view, nose down, sniffing curiously into a loose heap of papers on the ground in front of it: a small vaccination booklet with a chartreuse cover, a paw print and the handwritten word \"Impfpass\" on it; a square chartreuse sticky note with the handwritten words \"Wurmkur??\"; a crumpled sheet with the handwritten word \"Blutbild\" and a tiny scribbled chart; several loose sheets with short wavy ink lines for writing. The handwritten words are the only text, in the same loose ink line. The dog's body has one large flat chartreuse fill patch (like the reference's filled garments), the rest is line; the coat is white. Three tiny sniff marks near the nose, tail up. Adult, natural proportions, warm and witty but not cartoony or childish. Wide landscape composition, papers in front of and below the dog, dog to the right of centre, matching the composition of the second reference image.\n",
+  "createdAt": "2026-10-21T15:05:21.868Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "assets/illustrations/zoomie.png",
+    "assets/illustrations/sniffing.png",
+    "frappies-web .impeccable/build/crops/dog-papers.png (crop of the approved website comp)"
+  ],
+  "postprocess": "transparent margin trimmed to a 16-24px pad"
+}
