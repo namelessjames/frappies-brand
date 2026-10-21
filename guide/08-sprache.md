@@ -106,6 +106,16 @@ Rechtlich verpflichtend, wörtlich, über jedem KI-Ergebnis, nicht kürzen, nich
 **Ausgelesene Werte (OCR):**
 > Die von der KI ausgelesenen Werte können Fehler enthalten. Vergleich sie immer mit dem Originaldokument. Frappies übernimmt keine Gewähr für die Richtigkeit.
 
+**Englisch**, in derselben Bedeutung und ebenso wörtlich:
+
+> Frappies provides suggestions for information only. They are not a substitute for professional veterinary advice, diagnosis, or treatment. Always talk to your vet before changing your dog's health care or diet.
+
+> Frappies meal suggestions are non-binding and don't replace a veterinary nutrition assessment. Talk to your vet before changing your dog's diet, and get their confirmation or adjustments.
+
+> AI-extracted values may contain errors. Always check them against the original document. Frappies doesn't guarantee their accuracy.
+
+Reihenfolge wie oben: allgemein, Futterplan, ausgelesene Werte.
+
 Liest ein Ergebnis Werte aus und deutet sie (Befund mit Diagnosen oder Empfehlungen), stehen der allgemeine Hinweis und der OCR-Hinweis darüber, in dieser Reihenfolge. In einer Liste von KI-Ergebnissen (Verlauf) steht jeder Hinweis, der auf einen Eintrag der Liste zutrifft, einmal über der Liste, nicht in jedem Eintrag.
 
 Der Hinweis steht im Hinweisbanner (Kleedunst, Dunsttinte, Info-Icon, 14-px-Radius). Auf der Website steht derselbe Text überall, wo KI-Funktionen beworben werden.
@@ -125,3 +135,9 @@ Kontext: Der KI-Verlauf der App zeigt Befunde und Futterpläne als Liste. „Üb
 Entscheidung: Jeder zutreffende Hinweis steht einmal über der Liste, wörtlich und vollständig. Deutende Befunde tragen allgemeinen und OCR-Hinweis.
 Verworfen: Hinweis in jeder Karte (Wiederholung, die niemand mehr liest), nur der allgemeine Hinweis über der Liste (Futter- und OCR-Hinweis fehlten).
 App: namelessjames/frappies#98.
+
+### 2026-10-21: Englische KI-Hinweise
+Kontext: Die Website zeigt die KI-Hinweise auch auf Englisch; bisher standen sie nur in der App (`src/i18n/locales/en/common.ts`). Fall 1 (neues Muster: eine zweite Sprache der Hinweise in der Marke).
+Entscheidung: Der englische Wortlaut der App steht hier unter den deutschen Hinweisen und gilt wie sie wörtlich. App und Website zitieren ihn von hier.
+Verworfen: Die Website übersetzt selbst (zweiter Wortlaut neben der App), die Website liest aus dem App-Repo (Hinweise sind Marke, nicht App-Code).
+Web: namelessjames/frappies-web#6.
