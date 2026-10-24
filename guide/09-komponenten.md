@@ -120,7 +120,7 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 Kontext: Der Inhaber will das Hundeprofil der App so wie das Profil im Hero der Website: Porträt, Name, eine Zeile mit Alter, Gewicht und Rasse, darunter was heute ansteht und was als Nächstes kommt. Der bisherige Steckbrief war eine Schalen-Hero-Karte mit Initiale und Zoomie, darunter fünf Karten mit Aufzählungen ohne Zahlen. Fall 2 (eine bestehende Komponente ändert sich).
 Entscheidung: Der Steckbrief verliert die Schalen-Hero-Karte; das Porträt steht zentriert auf dem Kleeboden (siehe „Karten“). „Als Nächstes“ nutzt dieselbe Zeile wie Home, mit Ball, Erledigen und rollendem Ball; die Akte nutzt dieselben Zeilen wie der Gesundheits-Hub, damit keine Zahl ohne Eintrag steht. Die Schale bleibt dem Home-Header, dem Hub-Intro und der Hero-Karte des Profils.
 Verworfen: Porträt in der Schalen-Karte (die Website zeigt das Profil auf hellem Grund, und die Schale verdeckt die Tintenlinien des Porträts), die Website-Karte mit Filz-Icon-Kacheln (Filz heißt Nächstes, nicht Rubrik), weißer Kartenschatten wie auf der Website (verletzt „Tonal Step“).
-App: namelessjames/frappies (PR folgt).
+App: namelessjames/frappies#117.
 
 ### 2026-10-21: Sprachwechsel und Fußzeile der Website
 Kontext: Die Landingpage (namelessjames/frappies-web#6) braucht einen Weg zur englischen Seite und auf jeder Seite einen Link zum Impressum. Beides deckte die Marke nicht ab. Fall 1 (neue Komponente).
