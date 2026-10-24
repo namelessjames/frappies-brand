@@ -29,7 +29,7 @@ Scope: every rule binds the app. The website (`namelessjames/frappies-web`) is e
 - **The ball scale** (app). Urgency is shown by ball size in a fixed 40px slot: 34px seam ball (today/overdue), 22px disc (this week), 10px hedge dot (later). Never by colour alone.
 - **Reduced motion** (app and website). Every motion has a branch that renders the final state. No autoplay loops without it.
 - **Honest AI** (app and website). Every AI output carries the legally required disclaimer verbatim (`guide/08-sprache.md`, section "KI-Hinweise"). Do not soften or shorten it.
-- **Nothing invented** (app and website). No company name, address, legal text, testimonials, user counts, press quotes, vet endorsements or awards. None of these exist yet. Prices are set: use only the table in `guide/10-anwendung.md`, section "Website".
+- **Nothing invented** (app and website). No company name, testimonials, user counts, press quotes, vet endorsements or awards. None of these exist yet. The Impressum and the legal texts exist only on the website's legal pages, in the wording the owner approved; never retype them, the Impressum address included, anywhere else. Prices are set: use only the table in `guide/10-anwendung.md`, section "Website".
 - **Dog, not pet** (app and website). User-facing copy says Hund/dog. Database naming (`pets`) does not leak into copy.
 - **Loaded symbols stay out** (app and website). The meadow world uses balls, clover, hedges, frisbees, dogs. Nothing else as ornament.
 

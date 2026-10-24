@@ -110,7 +110,7 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 - **Navigation der Website:** Wortmarke links (Filz auf der Schale, Tinte auf Boden), höchstens fünf Ziele, ein Primärbutton („App laden“ oder was der Store erlaubt).
 - **Sprachwechsel:** ein Textlink mit dem Namen der anderen Sprache in ihrer Sprache („English“ auf Deutsch, „Deutsch“ auf Englisch), mit `lang`-Attribut, rechts in der Navigation. Keine Flaggen, keine automatische Umleitung.
 - **Primärbutton der Website:** Filz-Füllung mit Tinte-Label (Figtree 700, 18 px), 56 px hoch, 28 px horizontal, voll gerundet (Pille; die Regel „nie eine Pille“ gilt der App), mit dem weichen Tintenschatten der Website-Karten. Hover `primary-hover`, Fokus 2 px `brand`. Einer pro Viewport: im Hero und im Abschluss, sobald die Store-Links da sind; davor steht die Startzeile. Store-Badges von Apple und Google stehen daneben, nie statt des Buttons.
-- **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, AGB, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
+- **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, Nutzungsbedingungen, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
 
 ## Entscheidungen
 
@@ -126,3 +126,8 @@ Entscheidung: Pillenform, Filz, Tinte-Label, 56 px, Tintenschatten, wie oben unt
 Verworfen: der App-Button mit 14 px (wirkt auf der neuen Website kantig), ein Tinte-Button (Filz bedeutet auf der Website weiter die Hauptaktion), nur Store-Badges (kein eigener Button, keine eigene Stimme).
 Web: namelessjames/frappies-web#17.
 
+### 2026-10-24: Nutzungsbedingungen statt AGB; die Rechtstexte stehen fest
+Kontext: Die Rechtsseiten der Website (namelessjames/frappies-web#3) werden die einzige Quelle der Rechtstexte für App und Website (frappies-web ADR 0003). Die Fußzeile nannte „AGB“, die App „Nutzungsbedingungen“. Frappies verkauft nichts selbst, Premium kaufen Nutzerinnen und Nutzer bei Apple oder Google. Fall 2 (Weiterentwicklung: eine bestehende Regel ändert sich).
+Entscheidung: Die Fußzeile nennt „Nutzungsbedingungen“ (englisch „Terms“), nicht „AGB“. Impressum und Rechtstexte erscheinen nur auf den Rechtsseiten der Website, im Wortlaut, den die Inhaberin oder der Inhaber freigegeben hat; das Impressum ist festgelegt, Datenschutzerklärung und Nutzungsbedingungen folgen nach der rechtlichen Prüfung.
+Verworfen: „AGB“ behalten (es gibt keine Geschäftsbedingungen eines Verkaufs bei Frappies), beide Begriffe nebeneinander (zwei Namen für einen Text).
+Web: namelessjames/frappies-web#3.
