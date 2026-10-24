@@ -109,6 +109,7 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 - **Inline-Code, Tabellenzahlen:** Figtree mit `tabular-nums`, keine Monospace.
 - **Navigation der Website:** Wortmarke links (Filz auf der Schale, Tinte auf Boden), höchstens fünf Ziele, ein Primärbutton („App laden“ oder was der Store erlaubt).
 - **Sprachwechsel:** ein Textlink mit dem Namen der anderen Sprache in ihrer Sprache („English“ auf Deutsch, „Deutsch“ auf Englisch), mit `lang`-Attribut, rechts in der Navigation. Keine Flaggen, keine automatische Umleitung.
+- **Primärbutton der Website:** Filz-Füllung mit Tinte-Label (Figtree 700, 18 px), 56 px hoch, 28 px horizontal, voll gerundet (Pille; die Regel „nie eine Pille“ gilt der App), mit dem weichen Tintenschatten der Website-Karten. Hover `primary-hover`, Fokus 2 px `brand`. Einer pro Viewport: im Hero und im Abschluss, sobald die Store-Links da sind; davor steht die Startzeile. Store-Badges von Apple und Google stehen daneben, nie statt des Buttons.
 - **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, AGB, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
 
 ## Entscheidungen
@@ -118,3 +119,10 @@ Kontext: Die Landingpage (namelessjames/frappies-web#6) braucht einen Weg zur en
 Entscheidung: Sprachwechsel als Textlink mit dem Sprachnamen in der Zielsprache; Fußzeile auf Kleeboden, Meta in Salbei, nur Rechts- und Hilfelinks und die Kontaktadresse.
 Verworfen: Flaggen (Sprache ist kein Land; Schweiz und Österreich sprechen Deutsch), Umleitung nach Browsersprache (braucht einen Server, frappies-web ADR 0001), Fußzeile auf der Kleeschale (eine zweite Schale nimmt dem Hero das Gewicht).
 Web: namelessjames/frappies-web#6.
+
+### 2026-10-24: Primärbutton der Website
+Kontext: Die Website ist seit dem 24.10.2026 von den Komponentenregeln der App befreit; ihre Karten sind 24 px gerundet und tragen einen weichen Tintenschatten. Der Store-Button muss dazu passen, bevor die Store-Links kommen. Fall 1 (ein Muster, das die Marke für die Website noch nicht hatte).
+Entscheidung: Pillenform, Filz, Tinte-Label, 56 px, Tintenschatten, wie oben unter „Web-Ergänzungen“. In der App bleibt der 14-px-Button.
+Verworfen: der App-Button mit 14 px (wirkt auf der neuen Website kantig), ein Tinte-Button (Filz bedeutet auf der Website weiter die Hauptaktion), nur Store-Badges (kein eigener Button, keine eigene Stimme).
+Web: namelessjames/frappies-web#17.
+

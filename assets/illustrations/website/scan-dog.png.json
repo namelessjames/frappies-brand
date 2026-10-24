@@ -1,0 +1,11 @@
+{
+  "prompt": "A single illustration for the Frappies dog health app website. The mascot dog standing and sniffing a single sheet of paper lying flat in front of him, nose down, tail up, a few short ink lines showing the sniffing. The reference image is the page's mascot: a loose ink-line drawing of a scruffy white dog with flat chartreuse felt patches, a dark collar with a round felt tag, drawn on transparent ground; draw the same dog in the same line weight, colours and hand, nothing else in the picture, no ground, no shadow, no text, transparent background, PNG with alpha.\n",
+  "createdAt": "2026-10-24T08:51:15.967Z",
+  "tool": "impeccable generate-image",
+  "model": "gpt-image-2.5-flare",
+  "background": "transparent",
+  "outputFormat": "png",
+  "refs": [
+    "public/plates/hero-dog.png"
+  ]
+}

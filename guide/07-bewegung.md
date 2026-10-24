@@ -40,4 +40,4 @@ Jede Bewegung hat einen Zweig, der den Endzustand rendert. Einzüge stehen sofor
 
 ## Im Web
 
-Hover ist keine Bewegung, sondern ein Zustandswechsel in 150 ms: Tonstufe oder Unterstreichung. Parallax, Scroll-Jacking und Zähler, die hochlaufen, gehören nicht zur Marke. Ein Hero darf den Ball einmal auf die erste Zeile rollen lassen, wenn die Seite erscheint; das ist der eine Moment.
+Hover ist keine Bewegung, sondern ein Zustandswechsel in 150 ms: Tonstufe, Unterstreichung oder auf der Website ein Heben um 1 px. Parallax, Scroll-Jacking und Zähler, die hochlaufen, gehören nicht zur Marke. Die Website hat einen Moment beim Laden (das Telefon steigt aus dem Fuß des Heros, der Hund erscheint daneben, Gras und Text blenden ein) und leise Einblendungen der Flächen beim Scrollen (`animation-timeline: view()`, nur Deckkraft und 24 px Versatz); beides nur unter `prefers-reduced-motion: no-preference`.
