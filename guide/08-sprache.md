@@ -81,6 +81,9 @@ Humor sitzt im Bild (der Hund, der Ball) und in einem Halbsatz, nie in der Daten
 | Gassi-Runde | Gassi-Runde | walk route | Nicht „Route“ allein, nicht „Track“ |
 | Zuordnung (Runde zu Hunden) | Zuordnung | dog assignment | „alle Hunde“ oder eine Auswahl |
 | Anmelden / Registrieren / Abmelden | Anmelden / Registrieren / Abmelden | Sign in / Create account / Sign out | |
+| Nutzungsbedingungen | Nutzungsbedingungen | Terms of use (Link: „Terms“) | Nicht „AGB“: Frappies verkauft nichts selbst |
+| Datenschutzerklärung | Datenschutzerklärung (Link: „Datenschutz“) | Privacy policy (Link: „Privacy“) | Eine für App und Website |
+| Impressum | Impressum | Imprint | |
 | Speichern / Löschen / Abbrechen / Bearbeiten | Speichern / Löschen / Abbrechen / Bearbeiten | Save / Delete / Cancel / Edit | |
 | Mitteilungen | Mitteilungen | notifications | |
 | Home-Liste aller Hunde | Deine Hunde | Your dogs | |
