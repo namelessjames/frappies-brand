@@ -1,9 +1,7 @@
 {
-  "prompt": "Derived from zoomie.png (gpt-image generation, prompt in zoomie.png.json) by a deterministic pixel pass: white body pixels made transparent, clover ink #14301F recoloured to light #F2F4EC, felt chartreuse kept. Trimmed to the drawing. For use on the dark clover shell.",
-  "createdAt": "2026-10-10T14:20:00.000Z",
-  "tool": "derived (python PIL pixel pass, then magick trim)",
-  "derivedFrom": "assets/images/illustrations/zoomie.png",
-  "transform": "white coat pixels -> transparent; clover ink #14301F -> #F2F4EC; felt #D9EE52 kept; trimmed with 16px transparent border",
-  "background": "transparent",
-  "outputFormat": "png"
+  "prompt": "Derived from zoomie.png by a deterministic pixel pass for dark ground (scripts/derive-shell.py): the white coat stays opaque white, inner ink stays #14301F, ink within 4px of the transparent outside (silhouette, motion marks) is recoloured to chalk #F2F4EC, felt kept. Owner decision 2026-10-21; applied to every pose 2026-10-24.",
+  "createdAt": "2026-10-24T13:19:21.217Z",
+  "tool": "scripts/derive-shell.py (python PIL/numpy edge pass)",
+  "derivedFrom": "assets/illustrations/zoomie.png",
+  "transform": "silhouette ink within 4px of transparency -> #F2F4EC; inner ink, white and felt kept"
 }

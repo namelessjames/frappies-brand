@@ -42,7 +42,7 @@ Eine Kleerampe für jedes Neutral, ein Filzakzent, ein Orange als Alarm. Die Pal
 
 | Name | Token | Hell | Dunkel | Rolle |
 |---|---|---|---|---|
-| Kleeschale | `shell` | #14301F | #1F3F2B | Der dunkle Header auf Home, Hero-Karten von Hund und Profil |
+| Kleeschale | `shell` | #14301F | #1F3F2B | Der dunkle Header auf Home, das Hub-Intro, die Hero-Karte des Profils |
 | Schalentext | `shell-foreground` | #F2F4EC | #EEF2E6 | Text auf der Schale |
 | Schale gedämpft | `shell-muted` | #A9B8A6 | #A9B8A6 | Zweite Textebene auf der Schale |
 | Schale erhöht | `shell-raised` | #22432F | #2C5239 | Avatar-Mulde auf der Schale |

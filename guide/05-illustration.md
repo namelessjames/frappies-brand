@@ -33,11 +33,11 @@ Alle Posen sind so beschnitten, dass sie etwa gleich hoch stehen. Seitenverhält
 
 ## Shell-Varianten
 
-Jede Pose hat eine `*-shell.png`: helle Linie (Kreide), Fell ausgespart, dieselben Filzflächen. Sie gehört auf die Kleeschale und auf jede dunkle Fläche, weil Tintenlinien dort verschwinden. In der App wählt `Illustration` im Dunkelmodus automatisch die Shell-Variante. Die Originale mit weißem Fell gehören auf Weiß und Kleeboden.
+Jede Pose hat eine `*-shell.png` für die Kleeschale und jede dunkle Fläche, weil Tintenlinien dort verschwinden: Fell und Zettel bleiben weiß, die inneren Linien Tinte, nur die Außenlinie (Silhouette und Bewegungsstriche) wird Kreide. Dieselben Filzflächen. Seit dem 24.10.2026 gilt das für alle Posen und für das Porträt der Website; `scripts/derive-shell.py` leitet eine Shell-Variante deterministisch aus dem Original ab und schreibt die Sidecar-Datei. In der App wählt `Illustration` im Dunkelmodus automatisch die Shell-Variante. Die Originale gehören auf Weiß und Kleeboden.
 
-Nie ein Original auf Dunkel, nie eine Shell-Variante auf Hell. Ausnahmen `papers-shell.png`, `sniffing-shell.png`, `bowl-shell.png`, `tag-shell.png`, `lead-shell.png`, `ball-shell.png` und `resting-shell.png`: Fell und Zettel bleiben weiß, nur die Außenlinie wird Kreide (siehe Entscheidungen unten). Ausgespart bleiben nur noch `zoomie-shell.png` und `listening-shell.png`.
+Nie ein Original auf Dunkel, nie eine Shell-Variante auf Hell.
 
-Die Website nutzt seit dem 24.10.2026 einen eigenen Posensatz unter `assets/illustrations/website/`: derselbe Hund im Stil des freigegebenen Website-Entwurfs (dichterer Strich, Fell weiß mit Filzflecken, Halsband mit rundem Filzanhänger), erzeugt aus dem Entwurf und dann aus seiner Hero-Pose als Stilreferenz; dazu Requisiten (Grasbüschel, die Hundemarke „Zoomer“). Jede Datei trägt ihren Prompt und ihre Herkunft in der `.png.json` daneben. Neue Website-Posen entstehen hier aus `hero-dog.png` als Referenz. Ob die App-Posen diesem Stil folgen, ist offen.
+Die Website nutzt seit dem 24.10.2026 einen eigenen Posensatz unter `assets/illustrations/website/`: derselbe Hund im Stil des freigegebenen Website-Entwurfs (dichterer Strich, Fell weiß mit Filzflecken, Halsband mit rundem Filzanhänger), erzeugt aus dem Entwurf und dann aus seiner Hero-Pose als Stilreferenz; dazu Requisiten (Grasbüschel, die Hundemarke „Zoomer“). Jede Datei trägt ihren Prompt und ihre Herkunft in der `.png.json` daneben. Neue Website-Posen entstehen hier aus `hero-dog.png` als Referenz. Das Porträt `app-avatar.png` (mit `app-avatar-shell.png`) ist seit dem 24.10.2026 auch der Platzhalter für einen Hund ohne Foto im Steckbrief der App. Ob die übrigen App-Posen diesem Stil folgen, ist offen.
 
 Für Hilfe, Blog und Social liegen unter `assets/illustrations/web/` WebP-Kopien (höchstens 1600 px breit, die Wiese 2880 px), aus den PNG erzeugt; die Website kopiert nur diese.
 
@@ -93,3 +93,9 @@ Entscheidung: `assets/illustrations/website/` mit hero-dog, feature-dog, app-ava
 Offen: die App-Posen in diesem Stil neu zeichnen, damit App und Website einen Hund haben.
 Web: namelessjames/frappies-web#17.
 
+
+### 2026-10-24: Alle Shell-Varianten mit weißem Fell; das Porträt kommt in die App
+Kontext: Der Steckbrief der App soll aussehen wie das Hundeprofil im Hero der Website (Wunsch des Inhabers): das gezeichnete Porträt über dem Namen. Die App hatte für Zoomie und Listening noch die alten Shell-Varianten mit ausgespartem Fell, sodass im Dunkelmodus zwei Behandlungen desselben Hundes nebeneinander standen. Fall 2 (bestehende Shell-Varianten ändern sich; ein Website-Asset bekommt eine App-Rolle).
+Entscheidung: `zoomie-shell.png` und `listening-shell.png` bekommen dieselbe Behandlung wie die anderen Posen (Fell weiß, Außenlinie Kreide), erzeugt mit `scripts/derive-shell.py`, das die Behandlung reproduzierbar macht. `app-avatar.png` wird in der App zum Porträt eines Hundes ohne Foto, mit `app-avatar-shell.png` für den Dunkelmodus; die App kopiert beide byte-genau. Damit stehen in der App zwei Strichstärken desselben Hundes (Porträt dicht, Posen locker); die Posen der App in den Website-Stil zu überführen bleibt die offene Frage vom 24.10.2026 und ist der empfohlene nächste Schritt.
+Verworfen: ein Porträt im lockeren App-Stil generieren (der Inhaber hat den Website-Hund gewählt; ein drittes Bild würde die offene Frage nicht lösen), Initiale statt Porträt (der Website-Entwurf lebt vom Hund), die alten Shell-Varianten behalten (zwei Behandlungen in einer App).
+App: namelessjames/frappies#117.
