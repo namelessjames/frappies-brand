@@ -84,6 +84,7 @@ Humor sitzt im Bild (der Hund, der Ball) und in einem Halbsatz, nie in der Daten
 | Nutzungsbedingungen | Nutzungsbedingungen | Terms of use (Link: „Terms“) | Nicht „AGB“: Frappies verkauft nichts selbst |
 | Datenschutzerklärung | Datenschutzerklärung (Link: „Datenschutz“) | Privacy policy (Link: „Privacy“) | Eine für App und Website |
 | Impressum | Impressum | Imprint | |
+| Konto löschen | Konto löschen | Delete account | Sofort und endgültig; Dialog nennt Folge, Button wiederholt „Konto löschen“. Nicht „Konto schließen“, nicht „deaktivieren“ |
 | Speichern / Löschen / Abbrechen / Bearbeiten | Speichern / Löschen / Abbrechen / Bearbeiten | Save / Delete / Cancel / Edit | |
 | Mitteilungen | Mitteilungen | notifications | |
 | Home-Liste aller Hunde | Deine Hunde | Your dogs | |
