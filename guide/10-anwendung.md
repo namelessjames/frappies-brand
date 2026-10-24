@@ -14,29 +14,30 @@ Dunkelmodus ist erstklassig: dieselbe Rampe vom anderen Ende, Filz unverändert,
 
 Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, dass es ihr Hundeleben ordnet, und die App laden.
 
-**Struktur, die zur Marke passt:**
+Die Website ist seit dem 24.10.2026 die Landing Page einer Consumer-App im Stil von Duolingo, Headspace und Finanzguru: laut, farbig, mit dem Hund als Maskottchen. Sie übernimmt von der Marke die Farben, die Schriftfamilien, den Illustrationsstil, die Sprache, die Preise und die KI-Hinweise. Radien, Tiefe, Abstände, Schriftgrößen und Layout gehören der Website selbst und stehen in `DESIGN.md` von `namelessjames/frappies-web`; die Komponenten- und Layoutregeln der App ([04 Form und Raum](04-form-und-raum.md), [09 Komponenten](09-komponenten.md)) gelten dort nicht. Welche Grundregeln aus `AGENTS.md` trotzdem gelten, steht dort beim jeweiligen Punkt.
 
-1. **Hero auf der Kleeschale**, genau wie Home: Wortmarke in Filz oben links, Display Hero mit genau einem Satzteil in Filz, rechts der Hund im Zettelhaufen (`papers-shell`). Ein Primärbutton. Die Schale endet in 28-px-Unterecken.
-2. **Die Hundewiese** direkt unter der Schale: Hecke am Horizont, darauf die Ballskala als Entfernung. Heute nah und groß mit dem orangen Zeit-Chip, diese Woche in der Mitte, später klein an der Hecke, jeweils mit einer weißen Karte.
-3. **Danach Kleeboden** mit weißen Karten, die echte App-Inhalte zeigen: eine Hundekarte mit Ball, eine Akten-Zelle, ein Zeit-Chip in Orange. Die Website zeigt das Produkt, nicht Symbole für das Produkt.
-4. **Privatsphäre und KI** als eigene Sektion auf dunklem Grund (Klasse `dark`), in der Schärfe aus [08 Sprache](08-sprache.md): Bilder flüchtig, nur Werte gespeichert, die Praxis entscheidet. Der KI-Hinweis steht wörtlich dabei, jeder Beispielausgabe ihr eigener.
-5. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Markt in einer eigenen Zeile, darunter „Preise inkl. MwSt.“; kein „% sparen“, kein Hervorheben eines Abos.
+**Struktur:**
 
-   | Markt | Monatlich | Jährlich |
+1. **Hero auf Filz**, Kante zu Kante, mit der Filzkörnung (`assets/textures/felt-grain.png`): Wortmarke in Tinte oben links, Navigation rechts (Funktionen, Premium, Sprachwechsel), die Überschrift zentriert in Bricolage 800, darunter Einleitung und Startzeile. Aus dem Fuß des Heros ragt ein flaches Telefon mit dem Startbildschirm der App (Zoomer, heute fällig, als Nächstes), daneben sitzt der Hund und schaut hinauf; Grasbüschel am Fuß. Das ist das einzige Gerät auf der Website.
+2. **Eine Funktion pro Farbfläche**, im Wechsel Kleeboden, Tinte, Filz: alle Hunde (Boden), die Akte als weiße Karte mit den Zeilen der App (Tinte), die KI mit drei echten Ergebnissen des App-Modells als App-Karten, jede mit ihrem Hinweis (Boden), Premium mit der Preistabelle (Filz), der Abschluss mit dem schlafenden Hund (Tinte). Weiße Karten mit weichem Tintenschatten tragen den App-Inhalt; der Hund schaut aus Ecken und Kanten der Flächen herein.
+3. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Land in einer eigenen Zeile, darunter „Preise inkl. MwSt.“ und der Hinweis, dass die Stores nach dem Land des Store-Kontos abrechnen; kein „% sparen“, kein Hervorheben eines Abos.
+
+   | Land | Monatlich | Jährlich |
    |---|---|---|
    | Deutschland und Österreich | 4,99 € | 49,99 € |
    | Schweiz | CHF 4.00 | CHF 40.00 |
 
-   Frappies gibt es nur in diesen drei Ländern. Der Preis wird nicht nach Standort ausgewählt: Die Stores rechnen nach dem Land des Store-Kontos ab, nicht nach dem Ort der Besucherin.
-6. **Abschluss** mit dem ruhenden Hund und einem zweiten Primärbutton (der erste ist außer Sicht; pro Viewport einer).
+   Frappies gibt es nur in diesen drei Ländern.
 
-**Vor dem Start:** Solange die App in keinem Store steht, hat die Website keinen Primärbutton. An der Stelle beider Buttons steht die Startzeile in Prose: „Ab Januar 2027 für iPhone und Android in Deutschland, Österreich und der Schweiz.“ Keine Warteliste, kein Formular, kein „Bescheid geben“-Link, kein deaktivierter Button. Mit den Store-Links kommen die Buttons zurück.
+**Illustration:** Die Website nutzt den Posensatz unter `assets/illustrations/website/` (der Hund im Stil des freigegebenen Entwurfs, siehe [05 Illustration](05-illustration.md)) und die Filzkörnung unter `assets/textures/`. Beides kopiert die Website byte-genau; neue Posen entstehen hier, mit Prompt und Herkunft in der Sidecar-Datei.
 
-**Typografie:** Display XL/L für Überschriften, Prose 18/28 für Fließtext, Lesemaß 68ch. Keine Dachzeilen, keine Kicker, keine nummerierten Sektionen.
+**Vor dem Start:** Solange die App in keinem Store steht, hat die Website keinen Primärbutton. An der Stelle beider Buttons steht die Startzeile, das Datum fett: „**Ab Januar 2027** für iPhone und Android in Deutschland, Österreich und der Schweiz.“ Keine Warteliste, kein Formular, kein „Bescheid geben“-Link, kein deaktivierter Button. Mit den Store-Links kommen die Buttons zurück; ihre Form steht in [09 Komponenten](09-komponenten.md), „Primärbutton der Website“.
 
-**Was die Website nicht tut:** Stockfotos, Fotos fremder Hunde, Testimonials, Zahlen („10.000 Hunde“), Pressebalken, Store-Bewertungen, Verläufe, Glas, Parallax, hochzählende Zahlen, Filz als Sektionshintergrund, Orange für „Neu“.
+**Typografie:** die fluide Web-Rampe aus [03 Typografie](03-typografie.md), „Web-Erweiterung“. Keine Dachzeilen, keine Kicker, keine nummerierten Sektionen.
 
-**Breakpoints:** einspaltig unter 768 px, Container 1200 px, Sektionsrhythmus 48 bis 80 px. Der Hero auf dem Telefon stapelt: Überschrift, Button, dann die Illustration unter dem Text, nie darunter durchlaufend.
+**Nur hell:** Die Website hat keinen Dunkelmodus (`color-scheme: light`). Filz, Tinte und Boden sind ihre Flächen in jeder Systemeinstellung.
+
+**Was die Website nicht tut:** Stockfotos, Fotos fremder Hunde, Testimonials, Zahlen („10.000 Hunde“), Pressebalken, Store-Bewertungen, Verläufe, Glas, Parallax, hochzählende Zahlen, Orange für „Neu“, ein zweiter Zeichenstil, mehr als das eine Telefon.
 
 **Browserflächen:** Textauswahl Filz 70 %, Caret Wiesengrün, Fokusring 2 px Wiesengrün, Scrollbar schmal in Heckenlinie, Unterstreichungen 1,5 px mit 3 px Versatz. Diese Dinge sind Teil der Marke, nicht Browser-Standard.
 
@@ -131,3 +132,10 @@ Kontext: Der Inhaber fand die Landing Page langweilig und wollte sie mit den Ill
 Entscheidung: Hero mit „Weniger Zettel, mehr Zeit für deinen Hund.“ und dem Hund im Zettelhaufen; die frühere Hero-Zeile schließt jetzt die Seite. Die Hundewiese zeigt die Ballskala als Tiefe, mit Zoomer als Beispielhund. Jeder Abschnitt hat seine Pose (Tag bei den Hunden, Lead bei der Akte, Sniffing beim Befund, Listening bei der Erkrankungs-Info, Bowl beim Futterplan, Ball bei Premium, Resting am Schluss). Die KI-Sektion liegt dunkel, jede Beispielausgabe trägt ihren KI-Hinweis wörtlich. Bewegung: ein Moment beim Laden, der Hero auf `motion.spring.hero`, dann landen die Dinge auf der Wiese von hinten nach vorn auf `motion.spring.entry`; unter Reduced Motion steht alles.
 Verworfen: der Hundecomic (Panels kippen schnell in ein Kartenraster), die Wiese als Hero (das Zettel-Bild trägt den Einstieg stärker), eine durchgehende Szene mit fliegenden Bällen (zu viel Filz als Dekoration).
 Web: namelessjames/frappies-web#13.
+
+### 2026-10-24: Die Website wird eine eigene Fläche
+Kontext: Der Inhaber fand die Website trotz zweier Überarbeitungen eng und brav und wollte „eine richtige, moderne, mutige Marketing-Website“, die von der Marke nur Illustrationen, Farben und Schrift behält. In der Entscheidungsrunde wählte er den Standard einer Consumer-App-Landing-Page (Vergleich: Duolingo, Headspace, Finanzguru) und den Entwurf mit dem filzgetränkten Hero. Fall 2 (die Struktur und die Regeln der Website ändern sich).
+Entscheidung: Die Website ist von den Komponenten- und Layoutregeln der App befreit; ihr System steht in `DESIGN.md` von `namelessjames/frappies-web`. Die Marke behält Farben, Schriftfamilien, Illustrationsstil, Sprache, Preise, KI-Hinweise und die Liste dessen, was die Website nicht tut. Die Website ist nur hell. Ein einziges flaches Telefon im Hero zeigt die App; sonst kein Gerät.
+Verworfen: die Regeln der App weiter auf die Website anwenden (hielt sie bei zwei Versuchen eng), ein Stickerbogen, der Heimtierausweis und zwei weitere Entwürfe (vom Inhaber nicht gewählt), die App-Bildschirme in geneigten iPhones in jeder Sektion (vom Inhaber zurückgenommen), Dunkelmodus für die Website (Filzflächen bleiben hell, der Aufwand lohnt für eine Marketing-Seite nicht).
+Web: namelessjames/frappies-web#17.
+

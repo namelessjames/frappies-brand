@@ -37,7 +37,9 @@ Jede Pose hat eine `*-shell.png`: helle Linie (Kreide), Fell ausgespart, dieselb
 
 Nie ein Original auf Dunkel, nie eine Shell-Variante auf Hell. Ausnahmen `papers-shell.png`, `sniffing-shell.png`, `bowl-shell.png`, `tag-shell.png`, `lead-shell.png`, `ball-shell.png` und `resting-shell.png`: Fell und Zettel bleiben weiß, nur die Außenlinie wird Kreide (siehe Entscheidungen unten). Ausgespart bleiben nur noch `zoomie-shell.png` und `listening-shell.png`.
 
-Für die Website liegen unter `assets/illustrations/web/` WebP-Kopien (höchstens 1600 px breit, die Wiese 2880 px), aus den PNG erzeugt; die Website kopiert nur diese.
+Die Website nutzt seit dem 24.10.2026 einen eigenen Posensatz unter `assets/illustrations/website/`: derselbe Hund im Stil des freigegebenen Website-Entwurfs (dichterer Strich, Fell weiß mit Filzflecken, Halsband mit rundem Filzanhänger), erzeugt aus dem Entwurf und dann aus seiner Hero-Pose als Stilreferenz; dazu Requisiten (Grasbüschel, die Hundemarke „Zoomer“). Jede Datei trägt ihren Prompt und ihre Herkunft in der `.png.json` daneben. Neue Website-Posen entstehen hier aus `hero-dog.png` als Referenz. Ob die App-Posen diesem Stil folgen, ist offen.
+
+Für Hilfe, Blog und Social liegen unter `assets/illustrations/web/` WebP-Kopien (höchstens 1600 px breit, die Wiese 2880 px), aus den PNG erzeugt; die Website kopiert nur diese.
 
 ## Wo sie hingehört
 
@@ -84,3 +86,10 @@ Kontext: Im Dunkelmodus der Website stehen Tag, Lead, Ball und Resting noch mit 
 Entscheidung: `tag-shell.png`, `lead-shell.png`, `ball-shell.png` und `resting-shell.png` bekommen dieselbe Behandlung: Fell weiß, innere Linien Tinte, Außenlinie Kreide. Zoomie und Listening folgen, wenn die App sie braucht.
 Verworfen: nur die Website-Kopien ändern (die Website kopiert die Marke byte-genau).
 Web: namelessjames/frappies-web#15.
+
+### 2026-10-24: Posensatz der Website
+Kontext: Der Website-Entwurf, den der Inhaber wählte, zeigte den Hund in einem dichteren Strich als die App-Posen. In der Plattenprüfung lehnte er die App-Posen für die Website ab („I want the comp dog illustration“) und nahm die aus dem Entwurf erzeugten an. Die Website kopiert Illustrationen byte-genau aus der Marke, also gehören die Dateien hierher. Fall 1 (ein neuer Posensatz, der zur Marke dazukommt).
+Entscheidung: `assets/illustrations/website/` mit hero-dog, feature-dog, app-avatar, record-dog, scan-dog, listening-dog, meals-dog, premium-dog, closing-dog, feature-tag, grass-left, grass-right, grass-right-2 und die Filzkörnung `assets/textures/felt-grain.png`, alle mit Prompt-Sidecar. Die App-Posen bleiben, wie sie sind.
+Offen: die App-Posen in diesem Stil neu zeichnen, damit App und Website einen Hund haben.
+Web: namelessjames/frappies-web#17.
+

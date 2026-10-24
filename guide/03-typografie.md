@@ -57,7 +57,18 @@ In der App heißen die Dateien `BricolageGrotesque_800ExtraBold`, `BricolageGrot
 
 ## Web-Erweiterung
 
-Die App kennt keine Größe über 32 px. Für Website und Marketing erweitert die Rampe nach oben: Display L (44) und Display XL (56), beide ExtraBold mit -0.03em. Mehr nicht; ein 96-px-Hero wäre eine andere Marke. Prose (18/28) ist das Lesemaß für Artikel und Hilfe.
+Die App kennt keine Größe über 32 px; ein 96-px-Titel wäre in der App eine andere Marke. Die Website setzt dieselben Familien und Gewichte in einer fluiden Rampe, die mit dem Viewport wächst (Stand 24.10.2026, `DESIGN.md` von `namelessjames/frappies-web`):
+
+| Rolle | Schrift | Größe | Zeile | Für |
+|---|---|---|---|---|
+| Hero | Bricolage 800, -0.035em | 94 Entwurfspixel bei 1536 px Breite, skaliert mit `100vw / 1536`; gestapelt `clamp(40px, 11vw, 64px)` | 0.94 | Die eine Zeile im Hero |
+| Sektionstitel | Bricolage 800, -0.035em | `clamp(36px, 4.2vw, 60px)` | 1.02 | Jede Sektion |
+| Untertitel | Bricolage 800, -0.025em | `clamp(26px, 2.4vw, 34px)` | 1.1 | Funktionen innerhalb einer Sektion |
+| Lede | Figtree 500 | `clamp(17px, 1.3vw, 20px)` | 1.5 | Absatz unter einem Sektionstitel |
+| Fließtext | Figtree 400 | 17 px | 1.55 | Absätze, Kartentext |
+| Bildunterschrift | Figtree 400 | 13 px | 18 px | „Beispiel aus der App“ |
+
+In App-Karten, die die Website nachbaut, gelten die App-Rollen (Headline 22, Title 18, Row Title 15, Label 14, Meta 13). Display L, Display XL und Display Hero bleiben als Tokens für Hilfe, Blog und Social; Prose (18/28) ist das Lesemaß für Artikel und Hilfe.
 
 ## Laden im Web
 
@@ -76,3 +87,10 @@ Kontext: Der gewählte Entwurf der Landing Page setzt die Hero-Zeile mit 53 px V
 Entscheidung: `type.display-hero` 72/72, 800, -0.035em, nur für den Hero der Landing Page ab 1024 px. Darunter Display XL, auf dem Telefon Display L. Die App nutzt sie nicht.
 Verworfen: Display XL auf 72 px anheben (ändert jede Website-Überschrift), freie Größe im Code (umgeht die Tokens).
 Web: namelessjames/frappies-web#13.
+
+### 2026-10-24: Fluide Web-Rampe
+Kontext: Die neue Website (namelessjames/frappies-web#17) setzt Überschriften, die mit dem Viewport wachsen, und den Hero mit 94 Entwurfspixeln; die festen Web-Stufen 44/56/72 trugen den Entwurf nicht. Fall 2 (die Web-Erweiterung der Rampe ändert sich).
+Entscheidung: Die Website führt die fluide Rampe oben in „Web-Erweiterung“; die Familien und Gewichte bleiben die der Marke, Figtree 500 kommt für Ledes dazu. Der Satz „ein 96-px-Hero wäre eine andere Marke“ gilt für die App. Display L, XL und Hero bleiben als Tokens für Hilfe, Blog und Social.
+Verworfen: die festen Stufen auf die Website zwingen (der gewählte Entwurf braucht die Größe), ein neues Display-Token je Stufe (die Website skaliert fluid, Tokens wären Fixpunkte ohne Nutzen).
+Web: namelessjames/frappies-web#17.
+
