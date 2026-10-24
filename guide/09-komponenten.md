@@ -43,12 +43,14 @@ Ein Primärbutton pro Bildschirm. Nebeneinander stehende Buttons teilen eine Zei
 | Eigenschaft | Wert |
 |---|---|
 | Radius | 18 px |
-| Füllung | `card` auf `background`; `shell` für Home-Header und Hero-Karten |
+| Füllung | `card` auf `background`; `shell` für Home-Header und die Hero-Karte des Profils |
 | Schatten, Rand | keiner |
 | Innenabstand | 16 px für Listen und Zellen, 20 px für Prosa und Formulare |
 | Zeilen | 64 bis 68 px, 1 px Heckenlinie dazwischen |
 
 **Akten-Zelle:** 116 px, Zahl (Figure) oben links, Label (Row Title) und letzte Zeile (Meta) unten links, die ganze Zelle ist der Button. Barrierefreier Name: „Label: Zahl, letzter Eintrag“. Null steht in Salbei.
+
+**Steckbrief (Hundeprofil):** kein Schalen-Hero. Auf dem Kleeboden zentriert das Porträt (Foto im 120-px-Kreis, sonst `app-avatar.png` 200 px breit), darunter der Name in Display 32 und eine Zeile Figtree SemiBold 15 in Salbei: Alter · Gewicht · Rasse, Unbekanntes fällt weg. Dann „Als Nächstes“ mit den Zeilen der Home-Spur nur für diesen Hund (Ball, Erledigen, Zeit-Chip), die Akte als Zeilen des Gesundheits-Hubs (Zahl plus letzter Eintrag), die Basisdaten als Label-Wert-Zeilen (52 px, Heckenlinie) mit dem Sekundärbutton „Angaben bearbeiten“ darunter, zuletzt die KI-Werkzeuge. Eine leere Akte zeigt statt Spur und Akte die Karte „Leg los mit der Akte“.
 
 **Hundekarte auf Home:** eine Zeile pro Hund mit Avatar, Name (Headline), Status heute („Heute 2 Sachen fällig“ / „Heute alles erledigt“) und „Als Nächstes: …“. Der Ball sitzt links im 40-px-Slot.
 
@@ -113,6 +115,12 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 - **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, Nutzungsbedingungen, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
 
 ## Entscheidungen
+
+### 2026-10-24: Der Steckbrief folgt dem Hundeprofil der Website
+Kontext: Der Inhaber will das Hundeprofil der App so wie das Profil im Hero der Website: Porträt, Name, eine Zeile mit Alter, Gewicht und Rasse, darunter was heute ansteht und was als Nächstes kommt. Der bisherige Steckbrief war eine Schalen-Hero-Karte mit Initiale und Zoomie, darunter fünf Karten mit Aufzählungen ohne Zahlen. Fall 2 (eine bestehende Komponente ändert sich).
+Entscheidung: Der Steckbrief verliert die Schalen-Hero-Karte; das Porträt steht zentriert auf dem Kleeboden (siehe „Karten“). „Als Nächstes“ nutzt dieselbe Zeile wie Home, mit Ball, Erledigen und rollendem Ball; die Akte nutzt dieselben Zeilen wie der Gesundheits-Hub, damit keine Zahl ohne Eintrag steht. Die Schale bleibt dem Home-Header, dem Hub-Intro und der Hero-Karte des Profils.
+Verworfen: Porträt in der Schalen-Karte (die Website zeigt das Profil auf hellem Grund, und die Schale verdeckt die Tintenlinien des Porträts), die Website-Karte mit Filz-Icon-Kacheln (Filz heißt Nächstes, nicht Rubrik), weißer Kartenschatten wie auf der Website (verletzt „Tonal Step“).
+App: namelessjames/frappies (PR folgt).
 
 ### 2026-10-21: Sprachwechsel und Fußzeile der Website
 Kontext: Die Landingpage (namelessjames/frappies-web#6) braucht einen Weg zur englischen Seite und auf jeder Seite einen Link zum Impressum. Beides deckte die Marke nicht ab. Fall 1 (neue Komponente).

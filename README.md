@@ -51,8 +51,8 @@ node scripts/check-contrast.js   # Kontrasttabelle, Exit 1 bei Verstoß
 |---|---|
 | [`assets/logo/`](assets/logo/) | Bildmarke (`mark*.svg/png`), Wortmarke (`wordmark-*.svg/png`), Wortmarken-Geometrie (`wordmark.json`) |
 | [`assets/app-icon/`](assets/app-icon/) | App-Icon iOS, Android Adaptive (Vorder-, Hintergrund, Monochrom), Splash, Favicon |
-| [`assets/illustrations/`](assets/illustrations/) | Acht Posen des Frappies-Hundes, je Original und `*-shell`-Variante, mit eingebetteter Herkunft (`*.png.json`) |
-| [`assets/illustrations/website/`](assets/illustrations/website/) | Der Posensatz der Website im Stil des Entwurfs vom 24.10.2026, mit Requisiten, je mit Prompt-Sidecar |
+| [`assets/illustrations/`](assets/illustrations/) | Acht Posen des Frappies-Hundes, je Original und `*-shell`-Variante (`scripts/derive-shell.py`), mit eingebetteter Herkunft (`*.png.json`) |
+| [`assets/illustrations/website/`](assets/illustrations/website/) | Der Posensatz der Website im Stil des Entwurfs vom 24.10.2026, mit Requisiten, je mit Prompt-Sidecar; `app-avatar.png` ist auch das Porträt im Steckbrief der App |
 | [`assets/textures/`](assets/textures/) | Die Filzkörnung der Website-Flächen |
 | [`assets/email/`](assets/email/) | Wortmarke als PNG für E-Mail-Clients |
 

@@ -1,9 +1,7 @@
 {
-  "prompt": "Derived from listening.png (gpt-image generation, prompt in listening.png.json) by a deterministic pixel pass: each pixel unmixed into ink/white/felt, white coat made transparent, clover ink #14301F recoloured to light #F2F4EC, felt chartreuse kept. For use on the dark clover shell and dark-mode grounds.",
-  "createdAt": "2026-10-11T07:09:14.000Z",
-  "tool": "derived (python PIL/numpy unmix pass)",
-  "derivedFrom": "assets/images/illustrations/listening.png",
-  "transform": "white -> transparent; ink #14301F -> #F2F4EC; felt kept",
-  "background": "transparent",
-  "outputFormat": "png"
+  "prompt": "Derived from listening.png by a deterministic pixel pass for dark ground (scripts/derive-shell.py): the white coat stays opaque white, inner ink stays #14301F, ink within 4px of the transparent outside (silhouette, motion marks) is recoloured to chalk #F2F4EC, felt kept. Owner decision 2026-10-21; applied to every pose 2026-10-24.",
+  "createdAt": "2026-10-24T13:19:22.079Z",
+  "tool": "scripts/derive-shell.py (python PIL/numpy edge pass)",
+  "derivedFrom": "assets/illustrations/listening.png",
+  "transform": "silhouette ink within 4px of transparency -> #F2F4EC; inner ink, white and felt kept"
 }
