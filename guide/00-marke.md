@@ -47,7 +47,7 @@ Die Datenflächen sind nüchtern und ehrlich. Die Persönlichkeit lebt in den Mo
 
 ## Was es nicht gibt
 
-Bis die Inhaberin oder der Inhaber es festlegt, erscheint in keinem Markenmaterial: Firmenname, Testimonials, Nutzerzahlen, Bewertungen, Pressezitate, Tierarzt-Empfehlungen oder Auszeichnungen. Keines davon existiert. Impressum und Rechtstexte stehen nur auf den Rechtsseiten der Website (Impressum, Datenschutzerklärung, Nutzungsbedingungen), jeweils erst in dem Wortlaut, den die Inhaberin oder der Inhaber freigegeben hat, und werden nirgends sonst nachgeschrieben, auch die Adresse des Impressums nicht. Auch keine Fotografie von Hunden als Markenmittel; der Frappies-Hund ist gezeichnet (siehe [05 Illustration](05-illustration.md)). Die Premium-Preise sind festgelegt und stehen in [10 Anwendung](10-anwendung.md), Abschnitt Website; nur diese Werte erscheinen.
+Bis die Inhaberin oder der Inhaber es festlegt, erscheint in keinem Markenmaterial: Firmenname, Testimonials, Nutzerzahlen, Bewertungen, Pressezitate, Tierarzt-Empfehlungen oder Auszeichnungen. Keines davon existiert. Impressum und Rechtstexte stehen nur auf den Rechtsseiten der Website (Impressum, Datenschutzerklärung, Nutzungsbedingungen), jeweils erst in dem Wortlaut, den die Inhaberin oder der Inhaber freigegeben hat, und werden nirgends sonst nachgeschrieben, auch die Adresse des Impressums nicht. Auch keine Fotografie von Hunden als Markenmittel; der Frappies-Hund ist gezeichnet (siehe [05 Illustration](05-illustration.md)). Preise erscheinen nicht: Die Stores legen sie fest und zeigen sie vor dem Kauf (siehe [10 Anwendung](10-anwendung.md), Entscheidung vom 30.10.2026).
 
 ## Die verworfene Welt
 

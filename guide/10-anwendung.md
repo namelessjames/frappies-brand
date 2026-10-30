@@ -14,20 +14,15 @@ Dunkelmodus ist erstklassig: dieselbe Rampe vom anderen Ende, Filz unverändert,
 
 Modus: Überzeugen. Die Besucherin soll verstehen, was Frappies ist, glauben, dass es ihr Hundeleben ordnet, und die App laden.
 
-Die Website ist seit dem 24.10.2026 die Landing Page einer Consumer-App im Stil von Duolingo, Headspace und Finanzguru: laut, farbig, mit dem Hund als Maskottchen. Sie übernimmt von der Marke die Farben, die Schriftfamilien, den Illustrationsstil, die Sprache, die Preise und die KI-Hinweise. Radien, Tiefe, Abstände, Schriftgrößen und Layout gehören der Website selbst und stehen in `DESIGN.md` von `namelessjames/frappies-web`; die Komponenten- und Layoutregeln der App ([04 Form und Raum](04-form-und-raum.md), [09 Komponenten](09-komponenten.md)) gelten dort nicht. Welche Grundregeln aus `AGENTS.md` trotzdem gelten, steht dort beim jeweiligen Punkt.
+Die Website ist seit dem 24.10.2026 die Landing Page einer Consumer-App im Stil von Duolingo, Headspace und Finanzguru: laut, farbig, mit dem Hund als Maskottchen. Sie übernimmt von der Marke die Farben, die Schriftfamilien, den Illustrationsstil, die Sprache und die KI-Hinweise. Radien, Tiefe, Abstände, Schriftgrößen und Layout gehören der Website selbst und stehen in `DESIGN.md` von `namelessjames/frappies-web`; die Komponenten- und Layoutregeln der App ([04 Form und Raum](04-form-und-raum.md), [09 Komponenten](09-komponenten.md)) gelten dort nicht. Welche Grundregeln aus `AGENTS.md` trotzdem gelten, steht dort beim jeweiligen Punkt.
 
 **Struktur:**
 
 1. **Hero auf Filz**, Kante zu Kante, mit der Filzkörnung (`assets/textures/felt-grain.png`): Wortmarke in Tinte oben links, Navigation rechts (Funktionen, Premium, Sprachwechsel), die Überschrift zentriert in Bricolage 800, darunter Einleitung und Startzeile. Aus dem Fuß des Heros ragt ein flaches Telefon mit dem Startbildschirm der App (Zoomer, heute fällig, als Nächstes), daneben sitzt der Hund und schaut hinauf; Grasbüschel am Fuß. Das ist das einzige Gerät auf der Website.
-2. **Eine Funktion pro Farbfläche**, im Wechsel Kleeboden, Tinte, Filz: alle Hunde (Boden), die Akte als weiße Karte mit den Zeilen der App (Tinte), die KI mit drei echten Ergebnissen des App-Modells als App-Karten, jede mit ihrem Hinweis (Boden), Premium mit der Preistabelle (Filz), der Abschluss mit dem schlafenden Hund (Tinte). Weiße Karten mit weichem Tintenschatten tragen den App-Inhalt; der Hund schaut aus Ecken und Kanten der Flächen herein.
-3. **Premium** sachlich: was es ändert (kein Monatskontingent), was es nicht ändert (alles andere ist kostenlos, das Tageslimit gilt auch mit Premium). Die Preise stehen je Land in einer eigenen Zeile, darunter „Preise inkl. MwSt.“ und der Hinweis, dass die Stores nach dem Land des Store-Kontos abrechnen; kein „% sparen“, kein Hervorheben eines Abos.
+2. **Eine Funktion pro Farbfläche**, im Wechsel Kleeboden, Tinte, Filz: alle Hunde (Boden), die Akte als weiße Karte mit den Zeilen der App (Tinte), die KI mit drei echten Ergebnissen des App-Modells als App-Karten, jede mit ihrem Hinweis (Boden), Premium (Filz), der Abschluss mit dem schlafenden Hund (Tinte). Weiße Karten mit weichem Tintenschatten tragen den App-Inhalt; der Hund schaut aus Ecken und Kanten der Flächen herein.
+3. **Premium** sachlich: was kostenlos ist (die ganze Akte für einen Hund, das Monatskontingent), was Premium bringt (darunter mehr Hunde und den Befund-Scan) und dass das Tageslimit auch mit Premium gilt. Keine Preise: Die Stores legen sie fest und zeigen sie vor dem Kauf. Kein „% sparen“, kein Hervorheben eines Abos.
 
-   | Land | Monatlich | Jährlich |
-   |---|---|---|
-   | Deutschland und Österreich | 4,99 € | 49,99 € |
-   | Schweiz | CHF 4.00 | CHF 40.00 |
-
-   Frappies gibt es nur in diesen drei Ländern.
+   Frappies gibt es nur in Deutschland, Österreich und der Schweiz.
 
 **Illustration:** Die Website nutzt den Posensatz unter `assets/illustrations/website/` (der Hund im Stil des freigegebenen Entwurfs, siehe [05 Illustration](05-illustration.md)) und die Filzkörnung unter `assets/textures/`. Beides kopiert die Website byte-genau; neue Posen entstehen hier, mit Prompt und Herkunft in der Sidecar-Datei.
 
@@ -79,7 +74,7 @@ Modus: Überzeugen, in sechs Sekunden.
 - **Name:** Frappies. Untertitel: „Die Gesundheitsakte für deinen Hund“.
 - **Screenshots:** echte Bildschirme auf Kleeboden oder Kleeschale, Gerät ohne Rahmen oder mit flachem Tintenrahmen, eine Zeile Display 32 pro Bild, der Satzteil mit dem Nutzen in Filz nur auf der Schale. Höchstens einmal eine Illustration (Zoomie auf dem ersten Bild). Keine Sterne, keine „Nr. 1“-Behauptungen, keine Pfeile.
 - **Reihenfolge der Bilder:** Home mit Ball und Zahl, Akte eines Hundes, Befund scannen mit Hinweisbanner sichtbar, Erinnerungen, Dunkelmodus.
-- **Beschreibung:** Du-Form, dieselben Glossarbegriffe, der KI-Hinweis sinngemäß im Text. Preise nur mit den Werten aus dem Abschnitt Website.
+- **Beschreibung:** Du-Form, dieselben Glossarbegriffe, der KI-Hinweis sinngemäß im Text. Keine Preise; der Store zeigt sie selbst.
 - **Berechtigungstexte:** sagen, wofür („Frappies nutzt die Kamera, damit du Fotos deines Hundes machen und Befunde scannen kannst.“).
 
 ## Social
@@ -139,3 +134,8 @@ Entscheidung: Die Website ist von den Komponenten- und Layoutregeln der App befr
 Verworfen: die Regeln der App weiter auf die Website anwenden (hielt sie bei zwei Versuchen eng), ein Stickerbogen, der Heimtierausweis und zwei weitere Entwürfe (vom Inhaber nicht gewählt), die App-Bildschirme in geneigten iPhones in jeder Sektion (vom Inhaber zurückgenommen), Dunkelmodus für die Website (Filzflächen bleiben hell, der Aufwand lohnt für eine Marketing-Seite nicht).
 Web: namelessjames/frappies-web#17.
 
+### 2026-10-30: Keine Preise auf der Website
+Kontext: Die Hilfe-Seite (namelessjames/frappies-web#4) sollte Premium mit Preisen erklären. Der Inhaber hat entschieden: Die Stores bestimmen die Preise, die Website nennt keine. Das hebt die Entscheidung „Premium-Preise“ vom 20.10.2026 auf. Fall 2 (eine bestehende Regel ändert sich), vom Inhaber freigegeben.
+Entscheidung: Die Website und die Store-Texte nennen keine Preise; sie sagen, dass der Store den Preis vor dem Kauf zeigt. Die Preistabelle auf der Landingpage entfällt. Die Premium-Fläche nennt, was kostenlos ist und was Premium bringt, nach ADR 0009 und ADR 0010 der App.
+Verworfen: Preise je Land als feste Zeilen (müssen bei jeder Preisänderung in den Stores nachgezogen werden, und der Store zeigt ohnehin den verbindlichen Preis).
+Web: namelessjames/frappies-web#4.
