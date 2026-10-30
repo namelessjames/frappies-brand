@@ -37,7 +37,7 @@ Scope: every rule binds the app. The website (`namelessjames/frappies-web`) is e
 
 | Surface | Mode | Read |
 |---|---|---|
-| App screens (Expo, iOS/Android/Web) | Operate | `guide/09-komponenten.md`, `guide/04-form-und-raum.md` |
+| App screens (Expo, iOS/Android) | Operate | `guide/09-komponenten.md`, `guide/04-form-und-raum.md` |
 | Website, landing, pricing | Persuade | `guide/10-anwendung.md` section "Website" |
 | Help, docs, blog | Read | `guide/10-anwendung.md` section "Lesen" |
 | Transactional e-mail | Operate | `guide/10-anwendung.md` section "E-Mail" |

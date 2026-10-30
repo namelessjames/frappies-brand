@@ -62,14 +62,14 @@ Ein Primärbutton pro Bildschirm. Nebeneinander stehende Buttons teilen eine Zei
 | Mehrzeilig | 96 px, Text oben |
 | Label | Figtree SemiBold 14 darüber, 6 px Abstand |
 | Platzhalter | Salbei |
-| Fokus | Rand `brand`; im Web kein zusätzlicher Outline |
+| Fokus | Rand `brand` |
 | Hervorgehoben | `primary-soft`-Füllung für einen aus dem Foto gelesenen Wert |
 | Fehler | Rand `destructive`, 14-px-Zeile darunter in Alarmrot, höflich angesagt; Hinweiszeile in Salbei nimmt denselben Platz |
-| Datum | Dieselbe Hülle mit Kalender-Glyph; Web: natives Date-Input, Gerät: Plattform-Picker |
+| Datum | Dieselbe Hülle mit Kalender-Glyph; öffnet den Plattform-Picker |
 
 ## Navigation
 
-**Schwebender Header:** 60 px plus Status-Inset, mattiert (Blur auf iOS und Web, deckend auf Android). Links ein 44-px-runder weißer Zurück- oder Schließen-Button. Titel Bricolage 22, eine Zeile. Rechts 44-px-runde Mitteilungs- und Avatar-Buttons; der Avatar-Button ist Kleeschale mit Filz-Initialen.
+**Schwebender Header:** 60 px plus Status-Inset, mattiert (Blur auf iOS, deckend auf Android). Links ein 44-px-runder weißer Zurück- oder Schließen-Button. Titel Bricolage 22, eine Zeile. Rechts 44-px-runde Mitteilungs- und Avatar-Buttons; der Avatar-Button ist Kleeschale mit Filz-Initialen.
 
 **Tab-Leiste:** weiß, Heckenlinie oben, 70 px plus Bottom-Inset, vier Ziele. Label Figtree SemiBold 12. Das aktive Icon sitzt auf einer 56 × 32 px Filz-Pille in `bold`/`fill`, inaktive Icons sind Salbei.
 
