@@ -26,7 +26,7 @@ Humor sitzt im Bild (der Hund, der Ball) und in einem Halbsatz, nie in der Daten
 | Fehler | sagt, was schiefging und was zu tun ist | „Keine Verbindung. Prüf dein Internet und versuch es erneut.“ |
 | Löschen | nennt Objekt und Folge, Button wiederholt das Verb | „Erkrankung löschen? Die Einträge dazu werden entfernt.“ → „Löschen“ |
 | KI | ehrlich, nie überlegen | „Die KI liest deinen Befund aus. Das kann einige Sekunden dauern.“ |
-| Premium | sachlich, ohne Druck | „KI-Nutzungen ohne Monatskontingent. Alles andere gibt es auch kostenlos.“ |
+| Premium | sachlich, ohne Druck | „Mehr Hunde und der Befund-Scan. Die ganze Akte für einen Hund bleibt kostenlos.“ |
 | E-Mail | kurz, ein Button, ein Hinweis | „Fast geschafft! Bestätige kurz deine E-Mail-Adresse, dann kannst du die Gesundheitsakte deines Hundes anlegen.“ |
 
 ## Regeln
@@ -69,11 +69,11 @@ Humor sitzt im Bild (der Hund, der Ball) und in einem Halbsatz, nie in der Daten
 | KI-Ergebnis | KI-Auswertung | AI analysis | |
 | Futterplan | Futterplan | meal plan | |
 | KI-Erklärung einer Erkrankung | Erkrankungs-Info | condition summary | Nie „KI-Diagnose“ |
-| Freie KI-Nutzungen pro Monat | Monatskontingent | monthly allowance | Geteilt über alle KI-Funktionen; Einheit „KI-Nutzungen“ |
+| Freie KI-Nutzungen pro Monat | Monatskontingent | monthly allowance | Nur für Erkrankungs-Info und Futterplan, je Kalendermonat; der Befund-Scan gehört nicht dazu, er ist Premium. Einheit „KI-Nutzungen“ |
 | Tageslimit pro Funktion | Tageslimit | daily cap | Gilt auch für Premium |
 | Premium | Premium | Premium | Nicht Pro, nicht „Bezahlstufe“ |
 | Kostenlos | Kostenlos | Free | Nicht Basic, nicht Freemium |
-| Premium-Test | Premium-Test / testen | Premium trial / try | 7 Tage, einmal, ohne Zahlungsdaten. Nicht „Probeabo“. Button: „Premium-Test starten“ |
+| Premium-Test | Premium-Test / testen | Premium trial / try | 30 Tage, einmal je Konto, ohne Zahlungsdaten. Nicht „Probeabo“. Button: „Premium-Test starten“ |
 | Abo | Abo (Monatlich / Jährlich) | Plan (Monthly / Yearly) | Nicht „Paket“, nicht „Tier“ |
 | Abonnent | Abonnent | Subscriber | |
 | Abos ansehen | Abos ansehen | See plans | Führt zur Abo-Seite, kauft nie |
@@ -145,3 +145,9 @@ Kontext: Die Website zeigt die KI-Hinweise auch auf Englisch; bisher standen sie
 Entscheidung: Der englische Wortlaut der App steht hier unter den deutschen Hinweisen und gilt wie sie wörtlich. App und Website zitieren ihn von hier.
 Verworfen: Die Website übersetzt selbst (zweiter Wortlaut neben der App), die Website liest aus dem App-Repo (Hinweise sind Marke, nicht App-Code).
 Web: namelessjames/frappies-web#6.
+
+### 2026-10-30: Premium-Begriffe folgen ADR 0010 der App
+Kontext: Monatskontingent, Premium-Test und das Premium-Beispiel unter „Ton“ beschrieben noch die alte Regel (ein Kontingent für alle KI-Funktionen, Premium hebt es auf, alles andere kostenlos, 7 Tage Test). Die App hat das mit ADR 0009 (was kostenlos ist) und ADR 0010 (Kontingent, Limits, 30 Tage Test) geändert; die Website-Hilfe (namelessjames/frappies-web#4) hätte sonst der Marke widersprochen. Fall 2 (eine bestehende Regel ändert sich), Sachkorrektur nach einer Produktentscheidung, vom Inhaber freigegeben.
+Entscheidung: Das Monatskontingent gilt nur für Erkrankungs-Info und Futterplan; der Befund-Scan ist Premium. Der Premium-Test dauert 30 Tage, einmal je Konto. Das Premium-Beispiel nennt, was Premium bringt, nicht das Kontingent.
+Verworfen: Nur die Tageszahl ändern (die Zeile zum Kontingent bliebe falsch).
+App: namelessjames/frappies ADR 0009, ADR 0010. Web: namelessjames/frappies-web#4.
