@@ -139,13 +139,13 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 Kontext: Der Inhaber will getippte Werte wie in Apple Health (Wert und Zeitraum über dem Punkt, senkrechte Linie) und die Kurve um einen Zeitraum blättern können. Das Panel unter der Kurve mit bis zu fünf Einträgen war dafür zu lang. Fall 1 (die neue Komponente wird erweitert, bevor sie veröffentlicht ist).
 Entscheidung: Kopfzeile über der Kurve mit festem Platz; ohne Auswahl zeigt sie den Durchschnitt des Zeitraums, mit Auswahl wird sie zum `muted`-Label über dem Punkt, mit 1-px-Linie in `muted-foreground`. Wischen blättert um einen Zeitraum, leere Zeiträume entfallen. Die Einträge eines Punkts stehen nicht mehr im Label; die Liste darunter hat jeden.
 Verworfen: Label unter der Kurve behalten (zu weit vom Punkt, lange Listen schieben die Seite), Label frei über der Kurve schwebend (verdeckt Punkte; die feste Kopfzeile verdeckt nichts), Blättern mit Pfeiltasten (Platz in der Karte, und Wischen ist auf der Kurve die erwartete Geste), Wechsel ohne Mitbewegung (ein Wischen, das nichts unter dem Finger bewegt, fühlt sich kaputt an), Zurückwischen des Systems auf dem ganzen Bildschirm abschalten (nur die Kurve braucht die Geste).
-App: namelessjames/frappies#87.
+App: namelessjames/frappies#189 (Issue #87).
 
 ### 2026-10-31: Gewichtskurve
 Kontext: Die App zeigt den Gewichtsverlauf eines Hundes als Kurve (namelessjames/frappies#87). Die Marke kannte noch keine Kurve und kein Diagramm. Fall 1 (neue Komponente).
 Entscheidung: Linie und Punkte in `brand`, Raster als Heckenlinie in `border`, Beschriftung in Salbei, Zeitraum-Wahl als Auswahl-Chips, Punkt-Label als `muted`-Fläche unter der Kurve, wie oben unter „Gewichtskurve“. Keine neuen Tokens.
 Verworfen: Filz für Linie oder gewählten Punkt im hellen Thema (Filz heißt Nächstes, nicht Daten), Fläche oder Verlauf unter der Linie (Tiefe ist tonal, und eine Fläche liest sich als Menge), schwebender Tooltip über der Kurve (verdeckt Punkte und bricht deutsch nicht sauber um), eigene Markierung für Tierarztmessungen (eine zweite Bedeutung in der Kurve; das Label sagt es in Worten).
-App: namelessjames/frappies#87.
+App: namelessjames/frappies#189 (Issue #87).
 
 ### 2026-10-24: Der Steckbrief folgt dem Hundeprofil der Website
 Kontext: Der Inhaber will das Hundeprofil der App so wie das Profil im Hero der Website: Porträt, Name, eine Zeile mit Alter, Gewicht und Rasse, darunter was heute ansteht und was als Nächstes kommt. Der bisherige Steckbrief war eine Schalen-Hero-Karte mit Initiale und Zoomie, darunter fünf Karten mit Aufzählungen ohne Zahlen. Fall 2 (eine bestehende Komponente ändert sich).
