@@ -99,6 +99,23 @@ Wird ein Element erledigt, rollt der Ball auf die nächste Zeile (siehe [07 Bewe
 
 Nie Dringlichkeit allein durch Farbe. Nie der Ball als Dekoration oder Aufzählungspunkt.
 
+## Gewichtskurve
+
+Die Gewichtskurve eines Hundes steht in der App auf dem Gewicht-Bildschirm, in einer Karte zwischen aktuellem Gewicht und Eintragsliste. Sie ist die einzige Kurve der Marke; jede weitere Kurve folgt diesen Regeln. Sie nutzt nur bestehende Tokens:
+
+| Rolle | Token | Maß |
+|---|---|---|
+| Fläche | `card`, Radius 18 px, Innenabstand 16 px | keine Füllung unter der Linie, kein Verlauf |
+| Linie | `brand` | 2 px, runde Enden und Ecken, gerade Segmente |
+| Punkt | Füllung `card`, Ring `brand` | 8 px Durchmesser, Ring 2 px |
+| Gewählter Punkt | Füllung `brand` | 12 px Durchmesser |
+| Raster | `border` | 1 px (`stroke.divider`), nur waagrecht, keine Achsenlinien |
+| Achsenbeschriftung | `muted-foreground` | Meta 13 px, Figtree, `tabular-nums` |
+| Zeitraum-Wahl | wie der Auswahl-Chip: gewählt `secondary` mit Boden-Text, Ruhe `muted` mit Tinte | 44 px hoch, 10 px Radius, fünf in einer Reihe |
+| Punkt-Label | `muted`, Radius 14 px, unter der Kurve in der Karte | Wert als Figure (Bricolage 700), Einträge in Meta |
+
+Die ganze Kurvenfläche ist eine Tippfläche (weit über 44 px); ein Tipp wählt den nächsten Punkt, auch wenn bei vielen Punkten jeder nur wenige Pixel Abstand hat. Ein einzelner Punkt zeigt sein Label ohne Tipp. Kein Filz auf der Kurve, kein Orange, keine Farbe pro Zeitraum. Tierarztmessungen nennt das Label in Worten, die Kurve markiert sie nicht. Die Kurve erscheint ohne Animation. Für Screenreader ist sie ein Element mit einer Zusammenfassung (erster und letzter Wert, Minimum, Maximum, Zeitraum); die Eintragsliste darunter bleibt die vollständige Fassung.
+
 ## Illustration in Komponenten
 
 Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illustration.md), Titel in Display 32 (Bricolage 800), Text Body, ein Primärbutton. Auf der Schale die `*-shell`-Variante.
@@ -115,6 +132,12 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 - **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, Nutzungsbedingungen, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
 
 ## Entscheidungen
+
+### 2026-10-31: Gewichtskurve
+Kontext: Die App zeigt den Gewichtsverlauf eines Hundes als Kurve (namelessjames/frappies#87). Die Marke kannte noch keine Kurve und kein Diagramm. Fall 1 (neue Komponente).
+Entscheidung: Linie und Punkte in `brand`, Raster als Heckenlinie in `border`, Beschriftung in Salbei, Zeitraum-Wahl als Auswahl-Chips, Punkt-Label als `muted`-Fläche unter der Kurve, wie oben unter „Gewichtskurve“. Keine neuen Tokens.
+Verworfen: Filz für Linie oder gewählten Punkt im hellen Thema (Filz heißt Nächstes, nicht Daten), Fläche oder Verlauf unter der Linie (Tiefe ist tonal, und eine Fläche liest sich als Menge), schwebender Tooltip über der Kurve (verdeckt Punkte und bricht deutsch nicht sauber um), eigene Markierung für Tierarztmessungen (eine zweite Bedeutung in der Kurve; das Label sagt es in Worten).
+App: namelessjames/frappies#87.
 
 ### 2026-10-24: Der Steckbrief folgt dem Hundeprofil der Website
 Kontext: Der Inhaber will das Hundeprofil der App so wie das Profil im Hero der Website: Porträt, Name, eine Zeile mit Alter, Gewicht und Rasse, darunter was heute ansteht und was als Nächstes kommt. Der bisherige Steckbrief war eine Schalen-Hero-Karte mit Initiale und Zoomie, darunter fünf Karten mit Aufzählungen ohne Zahlen. Fall 2 (eine bestehende Komponente ändert sich).
