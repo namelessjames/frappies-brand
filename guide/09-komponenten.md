@@ -112,9 +112,11 @@ Die Gewichtskurve eines Hundes steht in der App auf dem Gewicht-Bildschirm, in e
 | Raster | `border` | 1 px (`stroke.divider`), nur waagrecht, keine Achsenlinien |
 | Achsenbeschriftung | `muted-foreground` | Meta 13 px, Figtree, `tabular-nums` |
 | Zeitraum-Wahl | wie der Auswahl-Chip: gewählt `secondary` mit Boden-Text, Ruhe `muted` mit Tinte | 44 px hoch, 10 px Radius, fünf in einer Reihe |
-| Punkt-Label | `muted`, Radius 14 px, unter der Kurve in der Karte | Wert als Figure (Bricolage 700), Einträge in Meta |
+| Kopfzeile | über der Kurve, linksbündig, ohne Fläche | ohne Auswahl: Durchschnitt des Zeitraums als Figure (Bricolage 700), darunter Zeitraum und „Durchschnitt aus N Messungen“ in Meta |
+| Auswahl-Label | `muted`, Radius 14 px, über dem gewählten Punkt zentriert, am Kartenrand gehalten, steht auf der Kurve auf | Wert als Figure, darunter Tag, Woche („13.–19. Juli 2026“) oder Monat und „Durchschnitt aus N Messungen“ oder „Beim Tierarzt gemessen“, beides Meta |
+| Auswahl-Linie | `muted-foreground` | 1 px senkrecht durch die Kurve am gewählten Punkt |
 
-Die ganze Kurvenfläche ist eine Tippfläche (weit über 44 px); ein Tipp wählt den nächsten Punkt, auch wenn bei vielen Punkten jeder nur wenige Pixel Abstand hat. Ein einzelner Punkt zeigt sein Label ohne Tipp. Kein Filz auf der Kurve, kein Orange, keine Farbe pro Zeitraum. Tierarztmessungen nennt das Label in Worten, die Kurve markiert sie nicht. Die Kurve erscheint ohne Animation. Für Screenreader ist sie ein Element mit einer Zusammenfassung (erster und letzter Wert, Minimum, Maximum, Zeitraum); die Eintragsliste darunter bleibt die vollständige Fassung.
+Die ganze Kurvenfläche ist eine Tippfläche (weit über 44 px); ein Tipp wählt den nächsten Punkt, auch wenn bei vielen Punkten jeder nur wenige Pixel Abstand hat. Die Kopfzeile hat eine feste Höhe, damit die Kurve beim Wählen nicht springt. Waagrechtes Wischen über die Kurve blättert um einen Zeitraum zurück (nach rechts wischen) oder vor (nach links): der Nachbarzeitraum folgt dem Finger und rastet ein. Zeiträume ohne Eintrag werden übersprungen, am ersten und am neuesten Eintrag ist Schluss. Das Zurückwischen des Systems bleibt überall außer auf der Kurve. Kein Filz auf der Kurve, kein Orange, keine Farbe pro Zeitraum. Tierarztmessungen nennt das Label in Worten, die Kurve markiert sie nicht. Die Kurve erscheint ohne Animation; beim Blättern bewegt sie nur der Finger. Für Screenreader ist sie ein einstellbares Element mit einer Zusammenfassung (erster und letzter Wert, Minimum, Maximum, Zeitraum), das mit Auf- und Abwischen blättert; die Eintragsliste darunter bleibt die vollständige Fassung.
 
 ## Illustration in Komponenten
 
@@ -132,6 +134,12 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 - **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, Nutzungsbedingungen, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
 
 ## Entscheidungen
+
+### 2026-10-31: Gewichtskurve wählt und blättert wie Apple Health
+Kontext: Der Inhaber will getippte Werte wie in Apple Health (Wert und Zeitraum über dem Punkt, senkrechte Linie) und die Kurve um einen Zeitraum blättern können. Das Panel unter der Kurve mit bis zu fünf Einträgen war dafür zu lang. Fall 1 (die neue Komponente wird erweitert, bevor sie veröffentlicht ist).
+Entscheidung: Kopfzeile über der Kurve mit festem Platz; ohne Auswahl zeigt sie den Durchschnitt des Zeitraums, mit Auswahl wird sie zum `muted`-Label über dem Punkt, mit 1-px-Linie in `muted-foreground`. Wischen blättert um einen Zeitraum, leere Zeiträume entfallen. Die Einträge eines Punkts stehen nicht mehr im Label; die Liste darunter hat jeden.
+Verworfen: Label unter der Kurve behalten (zu weit vom Punkt, lange Listen schieben die Seite), Label frei über der Kurve schwebend (verdeckt Punkte; die feste Kopfzeile verdeckt nichts), Blättern mit Pfeiltasten (Platz in der Karte, und Wischen ist auf der Kurve die erwartete Geste), Wechsel ohne Mitbewegung (ein Wischen, das nichts unter dem Finger bewegt, fühlt sich kaputt an), Zurückwischen des Systems auf dem ganzen Bildschirm abschalten (nur die Kurve braucht die Geste).
+App: namelessjames/frappies#87.
 
 ### 2026-10-31: Gewichtskurve
 Kontext: Die App zeigt den Gewichtsverlauf eines Hundes als Kurve (namelessjames/frappies#87). Die Marke kannte noch keine Kurve und kein Diagramm. Fall 1 (neue Komponente).
