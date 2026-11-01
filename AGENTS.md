@@ -10,7 +10,7 @@ You are working on something that carries the Frappies brand (app, website, e-ma
 
 ## The world in one paragraph
 
-Hundewiese am Nachmittag. One idea: the tennis ball sits on the next thing your dog needs. Deep clover ink (`foreground`, `shell`) carries the shell, the headlines and the text. Tennis-ball felt (`primary`, #D9EE52) fills the one primary action and marks "next": the urgency ball, the active tab, the active dog. Frisbee orange (`warning`) appears only when something is due. Everything else is pale clover ground (`background`) under white cards (`card`). Every neutral is tinted from clover; there is no grey anywhere. Display type is Bricolage Grotesque ExtraBold, UI type is Figtree. Depth is tonal, not shadowed. Two radii: 14px to operate, 18px to read. The dog is drawn, never photographed, in loose ink with flat felt patches.
+Hundewiese am Nachmittag. One idea: the tennis ball sits on the next thing your dog needs. Deep clover ink (`foreground`, `shell`) carries the shell, the headlines and the text. Tennis-ball felt (`primary`, #D9EE52) fills the one primary action and marks "next": the urgency ball, the active tab, the active dog. Frisbee orange (`warning`) appears only when something is due. Everything else is pale clover ground (`background`) under white cards (`card`). Every neutral is tinted from clover; there is no grey anywhere. Display type is Bricolage Grotesque ExtraBold, UI type is Figtree. Depth is tonal plus one soft ink shadow under white cards. Two radii: 14px to operate, 18px to read. The dog is drawn, never photographed, in loose ink with flat felt patches.
 
 ## Hard rules (check each before you finish)
 
@@ -21,7 +21,7 @@ Scope: every rule binds the app. The website (`namelessjames/frappies-web`) is e
 - **Frisbee is due** (app and website). `warning` fill only on items due today or overdue, with `warning-foreground` text. Never for categories, emphasis or calls to action. Orange as text on light surfaces is `warning-ink`.
 - **One ramp** (app and website). Every neutral comes from the clover ramp in `tokens.json`. No `#888`, no `gray-500`, no `rgba(0,0,0,x)` tints except the one FAB shadow; the website's shadows are clover ink at low alpha.
 - **Two radii** (app). 14px (`radius.control`) for things you operate, 18px (`radius.card`) for things you read. 28px only on the bottom of the Home shell. Full circles only for the ball, avatars, chips, the active tab pill, round icon buttons. Never a pill-shaped button.
-- **Tonal depth** (app). No shadows on cards. Separation is one step on the clover ramp. The only shadow in the system is `shadow.fab`.
+- **Ink shadow** (app and website). Every white card lifts on `shadow.card`; the FAB on `shadow.fab`. Both are clover ink at low alpha, never black, never hard-offset. Nothing else casts a shadow. Felt surfaces large enough to show it (primary button, active tab pill, active dog chip, FAB, website fields) are the grain raster `assets/textures/felt-grain.png`; small discs stay flat `primary`.
 - **Heavy headline** (app and website). Headlines, counts and figures are Bricolage Grotesque 700/800. Paragraphs, labels and controls are Figtree. Never a paragraph in Bricolage, never an important figure in Figtree.
 - **No bare count** (app and website). A number always sits next to what it counts (count + label + latest entry).
 - **44 point** (app and website). Every tappable element has a hit area of at least 44pt, including icon-only buttons and the 10px urgency dot.

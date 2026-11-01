@@ -36,7 +36,6 @@ Ein Primärbutton pro Bildschirm. Nebeneinander stehende Buttons teilen eine Zei
 | Auswahl-Chip (Formular) | 44 px hoch, Zweispalter, 10 px Radius, Label 14/600 | `secondary` mit Boden-Text | `muted` mit Tinte | Radios. Nie Filz |
 | Hund-Chip (KI) | 44 px Pille | `primary` mit Tinte | `card` mit Heckenrand | „Für welchen Hund?“; lange Namen brechen um |
 | Zeit-Chip | Bricolage 700 14 px, 6 px Radius, 4/8 px Innenabstand | `warning` mit Tinte, wenn heute fällig oder überfällig | Tinte als Text, keine Füllung | In „Als Nächstes“-Zeilen |
-| Hundename-Tag | Meta 13 px, 6 px Radius, `muted` | – | – | In einer Zeile, die mehrere Hunde betrifft |
 
 ## Karten
 
@@ -73,7 +72,7 @@ Ein Primärbutton pro Bildschirm. Nebeneinander stehende Buttons teilen eine Zei
 
 **Tab-Leiste:** weiß, Heckenlinie oben, 70 px plus Bottom-Inset, vier Ziele. Label Figtree SemiBold 12. Das aktive Icon sitzt auf einer 56 × 32 px Filz-Pille in `bold`/`fill`, inaktive Icons sind Salbei.
 
-**Home-Schale:** ersetzt den Header auf Home. Begrüßung („Hallo {{name}}“, Fallback „Hundemensch“) und die zweizeilige Überschrift mit der Zahl in Filz, daneben die 150-px-Zoomie-Illustration, die rechts ausläuft. Unterkanten 28 px.
+**Home-Schale:** ersetzt den Header auf Home. Begrüßung („Hallo {{name}}“, Fallback „Hundemensch“) und die zweizeilige Überschrift mit der Zahl in Filz, daneben der sitzende Hund (`hero-dog-shell.png`, 150 px), der zur Überschrift aufschaut und mit den Pfoten auf der Graslinie steht; die Grasbüschel (`grass-left-shell.png`) laufen über die ganze Breite am Fuß der Schale, 42 px hoch. Die Textspalte endet vor dem Hund und hält 54 px zum Fuß. Unterkanten 28 px.
 
 ## Banner
 
@@ -149,7 +148,7 @@ App: namelessjames/frappies#189 (Issue #87).
 
 ### 2026-10-24: Der Steckbrief folgt dem Hundeprofil der Website
 Kontext: Der Inhaber will das Hundeprofil der App so wie das Profil im Hero der Website: Porträt, Name, eine Zeile mit Alter, Gewicht und Rasse, darunter was heute ansteht und was als Nächstes kommt. Der bisherige Steckbrief war eine Schalen-Hero-Karte mit Initiale und Zoomie, darunter fünf Karten mit Aufzählungen ohne Zahlen. Fall 2 (eine bestehende Komponente ändert sich).
-Entscheidung: Der Steckbrief verliert die Schalen-Hero-Karte; das Porträt steht zentriert auf dem Kleeboden (siehe „Karten“). „Als Nächstes“ nutzt dieselbe Zeile wie Home, mit Ball, Erledigen und rollendem Ball; die Akte nutzt dieselben Zeilen wie der Gesundheits-Hub, damit keine Zahl ohne Eintrag steht. Die Schale bleibt dem Home-Header, dem Hub-Intro und der Hero-Karte des Profils.
+Entscheidung: Der Steckbrief verliert die Schalen-Hero-Karte; das Porträt steht zentriert auf dem Kleeboden (siehe „Karten“). „Als Nächstes“ nutzt dieselbe Zeile wie Home, mit Ball, Erledigen und rollendem Ball; die Akte nutzt dieselben Zeilen wie der Gesundheits-Hub, damit keine Zahl ohne Eintrag steht. Die Schale bleibt dem Home-Header, dem Hub-Intro und der Hero-Karte des Profils (das Hub-Intro entfällt am 31.10.2026, siehe unten).
 Verworfen: Porträt in der Schalen-Karte (die Website zeigt das Profil auf hellem Grund, und die Schale verdeckt die Tintenlinien des Porträts), die Website-Karte mit Filz-Icon-Kacheln (Filz heißt Nächstes, nicht Rubrik), weißer Kartenschatten wie auf der Website (verletzt „Tonal Step“).
 App: namelessjames/frappies#117.
 
@@ -170,3 +169,16 @@ Kontext: Die Rechtsseiten der Website (namelessjames/frappies-web#3) werden die 
 Entscheidung: Die Fußzeile nennt „Nutzungsbedingungen“ (englisch „Terms“), nicht „AGB“. Impressum und Rechtstexte erscheinen nur auf den Rechtsseiten der Website, im Wortlaut, den die Inhaberin oder der Inhaber freigegeben hat; das Impressum ist festgelegt, Datenschutzerklärung und Nutzungsbedingungen folgen nach der rechtlichen Prüfung.
 Verworfen: „AGB“ behalten (es gibt keine Geschäftsbedingungen eines Verkaufs bei Frappies), beide Begriffe nebeneinander (zwei Namen für einen Text).
 Web: namelessjames/frappies-web#3.
+
+### 2026-10-31: Der Gesundheits-Hub zeigt den Hund statt einer Anleitung
+Kontext: Der Hub öffnete mit einer Schalen-Karte „Wähl einen Hund, um seine Gesundheitsakte anzusehen und zu pflegen“ neben dem schlafenden Hund. Im Vergleich mit der Website (Inhaber, 31.10.2026) ist das eine Füllfläche: Sie erklärt die Chips darunter, die sich selbst erklären, und zeigt nicht, wessen Akte folgt. Fall 2 (eine bestehende Komponente ändert sich).
+Entscheidung: Der Hub beginnt wie der Steckbrief mit der Identität des gewählten Hundes auf dem Kleeboden: Foto im 88-px-Kreis (sonst das Porträt 150 px breit), Name in Bricolage 800 28 px, eine Zeile Alter · Gewicht · Rasse in Salbei. Darunter die Hunde-Chips, dann die Akte als Zeilen. Steckbrief und Hub teilen eine Komponente (`DogIdentity`, groß 120 px / 32 px, kompakt 88 px / 28 px). Der Text „hub.intro“ entfällt in beiden Sprachen. Die Schale bleibt der Home-Schale und der Hero-Karte des Profils.
+Verworfen: Identität in der Schalen-Karte (die Schale verdeckt die Tintenlinien des Porträts, siehe 24.10.2026), die Chips ganz oben ohne Identität (ein Chip-Streifen sagt nicht, wessen Akte folgt), den Text behalten und kürzen (jede Fassung bleibt eine Anleitung).
+App: namelessjames/frappies, Branch der Home-Schale (PR folgt).
+
+### 2026-10-31: Listen und Zeilen wie auf der Website
+Kontext: Im Vergleich mit der Website (Inhaber, 31.10.2026) fielen vier Stellen als veraltet auf: die Hundeliste schrieb „Gewicht: 62,5 kg  Alter: 5 Jahre“ als Label-Wert-Paare und ließ den Zoomie unter zwei Karten im Leeren laufen; jede Akten-Liste öffnete ihr Formular über eine gestrichelte Outline-Zeile; jede Akten-Karte trug einen roten Papierkorb; die „Als Nächstes“-Zeilen auf Home stellten den Hundenamen als Tag über den Titel. Fall 2 (bestehende Komponenten ändern sich).
+Entscheidung: (1) Die Hundeliste zeigt unter dem Namen dieselbe Zeile wie Steckbrief und Hub: „Alter · Gewicht · Rasse“, Figtree SemiBold 15 in Salbei; die Illustration unter der Liste entfällt, der Zoomie bleibt der Ankunft. (2) Das geschlossene Formular einer Akten-Liste ist der Filz-Primärbutton des Bildschirms („Impfung eintragen“ mit Plus); offen übernimmt „Speichern“ die Rolle, es gibt nie zwei. (3) Löschen liegt hinter einem Wischen nach links (`SwipeToDelete`): eine 96 px breite `destructive`-Fläche mit Papierkorb und „Löschen“ in Weiß, die den bestehenden Bestätigungsdialog öffnet; Screenreader bekommen dieselbe Aktion als Accessibility-Action der Karte. Alarmrot erscheint damit nur noch auf Wunsch. (4) In einer „Als Nächstes“-Zeile, die mehrere Hunde betrifft, steht der Hundename vorn in der Meta-Zeile („Luna · Tierarzttermin · in 4 Tagen“); der Hundename-Tag entfällt, `radius.nested-sm` bleibt dem Zeit-Chip.
+Verworfen: Papierkorb in Salbei statt Rot (ein Löschen-Icon auf jeder Karte bleibt Lärm, egal in welcher Farbe), Löschen nur im Bearbeiten-Formular (Gewicht und Allergien haben eines, fünf andere Listen nicht), gestrichelte Zeile in Filz (Filz braucht keinen gestrichelten Rand, um nach Hinzufügen auszusehen).
+App: namelessjames/frappies, Branch der Home-Schale (PR folgt).
+

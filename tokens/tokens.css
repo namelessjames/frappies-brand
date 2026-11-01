@@ -154,6 +154,7 @@
   --stroke-focus: 2px;
 
   --shadow-fab: 0px 6px 14px 0px rgba(20, 48, 31, 0.25);
+  --shadow-card: 0px 10px 30px 0px rgba(20, 48, 31, 0.10), 0px 1px 2px 0px rgba(20, 48, 31, 0.06);
 
   --duration-fast: 220ms;
   --duration-base: 250ms;
