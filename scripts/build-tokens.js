@@ -39,8 +39,12 @@ const simple = (group, prefix) =>
     .map(([k, v]) => `  --${prefix}-${k}: ${v.$value};`)
     .join("\n");
 
-const sh = tokens.shadow.fab.$value;
-const shadow = `  --shadow-fab: ${sh.offsetX} ${sh.offsetY} ${sh.blur} ${sh.spread} ${sh.color};`;
+// A shadow token is one layer or a list of layers; CSS takes them comma-separated.
+const shadowLayer = (l) => `${l.offsetX} ${l.offsetY} ${l.blur} ${l.spread} ${l.color}`;
+const shadow = Object.entries(tokens.shadow)
+  .filter(([key]) => !key.startsWith("$"))
+  .map(([key, token]) => `  --shadow-${key}: ${[token.$value].flat().map(shadowLayer).join(", ")};`)
+  .join("\n");
 const motion = [
   ...Object.entries(tokens.motion.duration)
     .filter(([k]) => !k.startsWith("$"))

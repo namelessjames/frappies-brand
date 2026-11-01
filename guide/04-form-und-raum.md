@@ -12,7 +12,7 @@ Zwei Radien tragen das System.
 | `radius.card` | 18 px | Dinge, die man liest: Karten, Akten-Zellen, Hero-Karten |
 | `radius.shell` | 28 px | Nur die unteren Ecken der Home-Schale |
 | `radius.pill` | voll | Ball, Avatare, Hunde-Chips, aktive Tab-Pille, runde 44-px-Icon-Buttons |
-| `radius.nested-sm` | 6 px | Zeit-Chip, Hundename-Tag in einer Zeile. Nur verschachtelt |
+| `radius.nested-sm` | 6 px | Zeit-Chip. Nur verschachtelt |
 | `radius.nested-md` | 10 px | Auswahl-Chips im Raster, Foto-Thumbnails. Nur verschachtelt |
 
 **Two Radii (Zwei Radien).** 14 px zum Bedienen, 18 px zum Lesen. Ein kleinerer Radius ist nur erlaubt, wenn er in einem der beiden sitzt. Nie eine Pille als Button.
@@ -62,17 +62,18 @@ Enge Gruppen, großzügige Trennung. Über einer Überschrift mehr Raum als daru
 | `size.web-measure` | 68ch | Lesemaß Web. Erweiterung |
 | `size.web-container` | 1200 | Web-Container. Erweiterung |
 
-**44 Point.** Jedes tippbare Element, auch ein Icon-Button zum Löschen oder der 10-px-Punkt, sitzt in einer Trefferfläche von mindestens 44 pt. Das sichtbare Zeichen darf klein sein, das Ziel nie.
+**44 Point.** Jedes tippbare Element, auch die Wisch-Aktion zum Löschen oder der 10-px-Punkt, sitzt in einer Trefferfläche von mindestens 44 pt. Das sichtbare Zeichen darf klein sein, das Ziel nie.
 
 ## Tiefe
 
-Tiefe ist tonal. Kleeboden, weiße Karte und Kleeschale sind drei Stufen einer Rampe; diese Stufe ist die einzige Trennung, die eine Fläche bekommt. Karten haben weder Schatten noch Rand. Felder und Outline-Buttons nutzen den 1,5-px-Heckenstrich statt Höhe. Der schwebende Header mattiert den Inhalt darunter (Blur auf iOS und Web, deckender Boden auf Android) statt einen Schatten zu werfen.
+Tiefe ist tonal, weich gehoben. Kleeboden, weiße Karte und Kleeschale sind drei Stufen einer Rampe; dazu schwebt jede weiße Karte auf einem diffusen Tintenschatten (`shadow.card`), wie auf der Website. Karten haben keinen Rand. Felder und Outline-Buttons nutzen den 1,5-px-Heckenstrich statt Höhe. Der schwebende Header mattiert den Inhalt darunter (Blur auf iOS und Web, deckender Boden auf Android) statt einen Schatten zu werfen.
 
 | Token | Wert | Für |
 |---|---|---|
-| `shadow.fab` | 0 6px 14px rgba(20, 48, 31, 0.25) | Der runde Filz-Button „Hund hinzufügen“, der über der Hundeliste schwebt. Der einzige Schatten im System |
+| `shadow.card` | 0 10px 30px rgba(20, 48, 31, 0.10), 0 1px 2px rgba(20, 48, 31, 0.06) | Jede weiße Karte auf Boden oder Fläche, App und Website |
+| `shadow.fab` | 0 6px 14px rgba(20, 48, 31, 0.25) | Der runde Filz-Button „Hund hinzufügen“, der über der Hundeliste schwebt |
 
-**Tonal Step (Tonstufe).** Karten werfen keinen Schatten. Muss sich eine Fläche abheben, rückt sie eine Stufe auf der Kleerampe. Der einzige Schatten ist die weiche Tintenhöhe unter einem schwebenden Aktionsbutton.
+**Ink Shadow (Tintenschatten).** Schatten sind Kleetinte mit niedriger Deckkraft, nie Schwarz, nie hart versetzt. Zwei Schatten sind das ganze Vokabular: die Kartenhöhe und die FAB-Höhe. Schalen, Chips, Felder und Buttons werfen keinen; sie heben sich durch die Tonstufe ab. Im Dunkelmodus bleibt der Schatten stehen und verschwindet auf dem dunklen Boden von selbst.
 
 ## Layout in der App
 
@@ -96,3 +97,12 @@ Die Website bekommt, was die App nicht braucht: Breakpoints und einen Container.
 - Sektionsrhythmus 48 px (Telefon) bis 80 px (Desktop) zwischen Sektionen; innerhalb einer Sektion 16 bis 32 px.
 - Die Kleeschale darf als Hero-Fläche ganz oben stehen, mit 28-px-Unterecken, genau wie auf Home. Danach Kleeboden mit weißen Karten.
 - Karten im Web bleiben randlos und schattenlos. Hover hebt nicht; Hover ändert höchstens die Tonstufe (`card` → `accent`) oder unterstreicht den Link.
+
+## Entscheidungen
+
+### 2026-10-31: Karten schweben wie auf der Website
+Kontext: Im Vergleich der Emulator-Aufnahmen mit der Landing Page (Inhaber, 31.10.2026) wirkten die App-Bildschirme flach: weiße Karten auf #F2F4EC trennen sich kaum vom Boden, und ohne Höhe lesen sie sich wie frühes Material Design. Die Website hebt dieselben Karten seit dem 24.10.2026 auf einem Tintenschatten. Fall 3 (Regel und Befund kollidieren: „Tonal Step“ gegen die wahrgenommene Flachheit).
+Entscheidung: `shadow.card` wird Marken-Token für App und Website (zwei Lagen, Kleetinte bei 10 % und 6 %); die App setzt ihn auf jede weiße Karte (`shadow-card` neben `rounded-card bg-card`). „Tonal Step“ wird zu „Ink Shadow“: Schatten nur in Tinte, nur auf Karten und dem FAB. Die Filz-Flächen (Primärbutton, aktive Tab-Pille, aktiver Hunde-Chip, FAB) tragen die Filzkörnung `assets/textures/felt-grain.png` als gekachelte Rasterfläche, wie die Felder der Website; kleine Scheiben (Ball, Zeit-Chip) bleiben flach.
+Verworfen: den Boden eine Stufe dunkler (`muted` wäre dann der Boden, und Chips, Icon-Kacheln und Banner in `muted` verschwänden), Schatten nur auf Akten-Karten (zwei Kartenarten in einer App), Körnung auf jedem Filz (auf einer 10-px-Scheibe ist sie Rauschen).
+App: namelessjames/frappies PR #194.
+
