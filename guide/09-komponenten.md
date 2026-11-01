@@ -142,7 +142,7 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 Kontext: Die Gesundheitsakte als PDF zeigt den Gewichtsverlauf als Kurve über ein Jahr (namelessjames/frappies#102). Die Regeln der Gewichtskurve galten nur dem Bildschirm; „Dokumente und Präsentationen“ in [10 Anwendung](10-anwendung.md) kennt keine Kurve. Fall 1 (die Komponente bekommt eine Druckfassung, nichts Bestehendes ändert sich).
 Entscheidung: Dieselben Tokens und Maße wie am Bildschirm, ohne alles Interaktive; die Seite ist die Fläche; Achsenbeschriftung in 8 pt, passend zum Textmaß des Dokuments; eine Bildunterschrift nennt den Zeitraum.
 Verworfen: Karte mit Radius um die Kurve (auf Papier eine Fläche ohne Zweck), Filz für die Linie (die eine Filzmarkierung der Seite gehört dem Namen), Linie in Tinte statt `brand` (die Kurve sähe anders aus als in der App), Durchschnitt als Figure über der Kurve (die Tabelle darunter trägt die Werte).
-App: namelessjames/frappies#102.
+App: namelessjames/frappies#204 (Issue #102).
 
 ### 2026-10-31: Gewichtskurve wählt und blättert wie Apple Health
 Kontext: Der Inhaber will getippte Werte wie in Apple Health (Wert und Zeitraum über dem Punkt, senkrechte Linie) und die Kurve um einen Zeitraum blättern können. Das Panel unter der Kurve mit bis zu fünf Einträgen war dafür zu lang. Fall 1 (die neue Komponente wird erweitert, bevor sie veröffentlicht ist).
