@@ -104,11 +104,11 @@ App: namelessjames/frappies#117.
 Kontext: Die App wirkte neben der Website veraltet (Inhaber, 31.10.2026, Vergleich der Emulator-Aufnahmen mit der Landing Page). Der größte sichtbare Unterschied im ersten Viewport: Die Website zeigt den sitzenden Hund, der zur Überschrift aufschaut, auf gezeichnetem Gras; die Home-Schale der App zeigte die lockere Zoomie-Pose, die rechts ausläuft. Fall 2 (die Home-Schale ändert sich; Website-Assets bekommen eine App-Rolle, wie das Porträt am 24.10.2026).
 Entscheidung: `hero-dog.png` und `grass-left.png` werden App-Assets der Home-Schale: der Hund sitzt rechts, seine Pfoten auf der Graslinie, das Gras läuft über die ganze Breite am Fuß der Schale. Beide bekommen `*-shell.png` aus `scripts/derive-shell.py` (Fell weiß, Außenlinie und Grashalme Kreide), weil die Schale in beiden Themes dunkel ist; die App kopiert alle vier Dateien byte-genau. Die Zoomie-Pose bleibt für Ankunft und Login. Die Textspalte der Überschrift bleibt bei 32 px und endet vor dem Hund; sie hält 54 px Abstand zum Fuß, damit kein Wort in die 42 px hohen Halme läuft.
 Verworfen: Überschrift auf 36 px (03 Typografie: über 32 px ist in der App eine andere Marke; längere deutsche Varianten brechen in der schmaleren Spalte auf fünf Zeilen), Gras als Muster hinter dem Text („Wo nicht“), eine neue Pose im lockeren App-Stil (die offene Frage vom 24.10.2026 bleibt; ein drittes Bild löst sie nicht).
-App: namelessjames/frappies, Branch der Home-Schale (PR folgt).
+App: namelessjames/frappies PR #194.
 
 ### 2026-10-31: Die App übernimmt den Posensatz der Website
 Kontext: Seit dem 24.10.2026 standen in der App zwei Strichstärken desselben Hundes nebeneinander (Porträt und Home-Schale dicht, Posen locker); der Inhaber will App und Website mit einem Hund (31.10.2026). Fall 2 (bestehende App-Posen ändern sich; die offene Frage vom 24.10.2026 wird entschieden).
 Entscheidung: Die App lädt die Website-Platten unter ihren bisherigen Bedeutungen (Zuordnung oben), kopiert byte-genau mit Sidecar, dazu neue `*-shell.png` für sechs Platten. Die Platten sind quadratisch, der Hund füllt sie; in der App gibt eine Breite allen Posen dieselbe Höhe (130 px in leeren Akten, 150 px in größeren Leerzuständen). Zoomie (Ankunft, Login) und Ball (erster Hund, Feedback, Profil) bleiben vorerst die lockeren Zeichnungen, bis sie aus `hero-dog.png` als Referenz neu entstehen; das ist der nächste Schritt und braucht den Bildgenerator des Inhabers.
 Verworfen: die lockeren Posen behalten und nur die Schale wechseln (zwei Hunde in einer App), die Website-Posen auf den lockeren Strich zurückzeichnen (der Inhaber hat den Website-Hund gewählt).
-App: namelessjames/frappies, Branch der Home-Schale (PR folgt).
+App: namelessjames/frappies PR #194.
 

@@ -104,5 +104,5 @@ Die Website bekommt, was die App nicht braucht: Breakpoints und einen Container.
 Kontext: Im Vergleich der Emulator-Aufnahmen mit der Landing Page (Inhaber, 31.10.2026) wirkten die App-Bildschirme flach: weiße Karten auf #F2F4EC trennen sich kaum vom Boden, und ohne Höhe lesen sie sich wie frühes Material Design. Die Website hebt dieselben Karten seit dem 24.10.2026 auf einem Tintenschatten. Fall 3 (Regel und Befund kollidieren: „Tonal Step“ gegen die wahrgenommene Flachheit).
 Entscheidung: `shadow.card` wird Marken-Token für App und Website (zwei Lagen, Kleetinte bei 10 % und 6 %); die App setzt ihn auf jede weiße Karte (`shadow-card` neben `rounded-card bg-card`). „Tonal Step“ wird zu „Ink Shadow“: Schatten nur in Tinte, nur auf Karten und dem FAB. Die Filz-Flächen (Primärbutton, aktive Tab-Pille, aktiver Hunde-Chip, FAB) tragen die Filzkörnung `assets/textures/felt-grain.png` als gekachelte Rasterfläche, wie die Felder der Website; kleine Scheiben (Ball, Zeit-Chip) bleiben flach.
 Verworfen: den Boden eine Stufe dunkler (`muted` wäre dann der Boden, und Chips, Icon-Kacheln und Banner in `muted` verschwänden), Schatten nur auf Akten-Karten (zwei Kartenarten in einer App), Körnung auf jedem Filz (auf einer 10-px-Scheibe ist sie Rauschen).
-App: namelessjames/frappies, Branch der Home-Schale (PR folgt).
+App: namelessjames/frappies PR #194.
 
