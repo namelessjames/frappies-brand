@@ -51,7 +51,7 @@ Ein Primärbutton pro Bildschirm. Nebeneinander stehende Buttons teilen eine Zei
 
 **Steckbrief (Hundeprofil):** kein Schalen-Hero. Auf dem Kleeboden zentriert das Porträt (Foto im 120-px-Kreis, sonst `app-avatar.png` 200 px breit), darunter der Name in Display 32 und eine Zeile Figtree SemiBold 15 in Salbei: Alter · Gewicht · Rasse, Unbekanntes fällt weg. Dann „Als Nächstes“ mit den Zeilen der Home-Spur nur für diesen Hund (Ball, Erledigen, Zeit-Chip), die Akte als Zeilen des Gesundheits-Hubs (Zahl plus letzter Eintrag), die Basisdaten als Label-Wert-Zeilen (52 px, Heckenlinie) mit dem Sekundärbutton „Angaben bearbeiten“ darunter, zuletzt die KI-Werkzeuge. Eine leere Akte zeigt statt Spur und Akte die Karte „Leg los mit der Akte“.
 
-**Hundekarte auf Home:** eine Zeile pro Hund mit Avatar, Name (Headline), Status heute („Heute 2 Sachen fällig“ / „Heute alles erledigt“) und „Als Nächstes: …“. Der Ball sitzt links im 40-px-Slot.
+**Hundekarte auf Home:** eine Zeile pro Hund mit Avatar, Name (Headline), Status heute („Heute 2 Sachen fällig“ / „Heute nichts fällig“) und „Als Nächstes: …“. Der Ball sitzt links im 40-px-Slot.
 
 ## Felder
 
@@ -97,6 +97,8 @@ Eine Filzscheibe in einem festen 40-px-Slot markiert das Nächste. Ihre Größe 
 Wird ein Element erledigt, rollt der Ball auf die nächste Zeile (siehe [07 Bewegung](07-bewegung.md)). Der Ball erscheint auf Home, bei der nächsten offenen Erinnerung und bei der am frühesten fälligen Auffrischung. Medikamente tragen keinen Ball, weil ihre Daten keinen Zeitplan haben. Pro Liste außerhalb der Home-Spur höchstens ein Ball.
 
 Nie Dringlichkeit allein durch Farbe. Nie der Ball als Dekoration oder Aufzählungspunkt.
+
+**Der Ball zum Fangen.** Liegt der Ball auf einer Erinnerung, die sich abhaken lässt, sitzt er in einem 44-pt-Ring aus der 1,5-px-Heckenlinie, zentriert auf dem 40-px-Slot. Der Ring ist der einzige Unterschied zum Ball einer Impfung oder eines Termins, die man nur ansehen kann. Beim Drücken wird der Ring wiesengrün (`brand`) und der Ball gibt mit der Druckfeder auf 0,92 nach; beim Loslassen füllt sich der Ring für 220 ms mit Tinte (`secondary`) und einem hellen Haken, dann verlässt die Zeile den Bildschirm und der Ball rollt weiter. Unter Reduced Motion wechselt nur die Farbe. Der Ball pulsiert, leuchtet oder springt nie, um zum Tippen einzuladen; das tut der Ring.
 
 ## Gewichtskurve
 
@@ -181,4 +183,29 @@ Kontext: Im Vergleich mit der Website (Inhaber, 31.10.2026) fielen vier Stellen 
 Entscheidung: (1) Die Hundeliste zeigt unter dem Namen dieselbe Zeile wie Steckbrief und Hub: „Alter · Gewicht · Rasse“, Figtree SemiBold 15 in Salbei; die Illustration unter der Liste entfällt, der Zoomie bleibt der Ankunft. (2) Das geschlossene Formular einer Akten-Liste ist der Filz-Primärbutton des Bildschirms („Impfung eintragen“ mit Plus); offen übernimmt „Speichern“ die Rolle, es gibt nie zwei. (3) Löschen liegt hinter einem Wischen nach links (`SwipeToDelete`): eine 96 px breite `destructive`-Fläche mit Papierkorb und „Löschen“ in Weiß, die den bestehenden Bestätigungsdialog öffnet; Screenreader bekommen dieselbe Aktion als Accessibility-Action der Karte. Alarmrot erscheint damit nur noch auf Wunsch. (4) In einer „Als Nächstes“-Zeile, die mehrere Hunde betrifft, steht der Hundename vorn in der Meta-Zeile („Luna · Tierarzttermin · in 4 Tagen“); der Hundename-Tag entfällt, `radius.nested-sm` bleibt dem Zeit-Chip.
 Verworfen: Papierkorb in Salbei statt Rot (ein Löschen-Icon auf jeder Karte bleibt Lärm, egal in welcher Farbe), Löschen nur im Bearbeiten-Formular (Gewicht und Allergien haben eines, fünf andere Listen nicht), gestrichelte Zeile in Filz (Filz braucht keinen gestrichelten Rand, um nach Hinzufügen auszusehen).
 App: namelessjames/frappies PR #194.
+
+### 2026-11-01: Der Ball zum Fangen
+Kontext: In der „Als Nächstes“-Spur (Home, Steckbrief, Eingang) hakt ein Tipp auf den Ball eine Erinnerung ab. Nichts zeigte das: der Ball kann ein 10-px-Punkt sein, hatte keinen Druckzustand außer Deckkraft und keinen Haken, und die Zeile verschwand ohne Bestätigung. Die Kritik der App (2026-11-01, `.impeccable/critique`) stufte das als P1 ein: Die Signaturinteraktion war nur für Screenreader benannt. Fall 1 (ein Muster, das die Marke noch nicht abdeckte: der abhakbare Ball).
+Entscheidung: Ein abhakbarer Ball sitzt in einem 44-pt-Heckenlinien-Ring (siehe „Der Ball“). Druck: Ring `brand`, Ball auf 0,92 mit `motion.spring.press`. Loslassen: Ring 220 ms (`motion.duration.fast`) in `secondary` mit Haken in `secondary-foreground`, dann rollt der Ball. Bälle auf Impfungen und Terminen bleiben ohne Ring.
+Verworfen: Ball pulsieren oder leuchten lassen (verboten in „Der Ball rollt“, und Dringlichkeit darf nicht wie eine Einladung aussehen), ein zweites Häkchen rechts in der Zeile (zwei Bedienelemente für eine Handlung, und der Ball verlöre seine Rolle), Wischen zum Erledigen (unsichtbar wie das Löschen, löst das Problem nicht), ein hohler Ball für abhakbare Zeilen (bricht die Ballskala: Größe ist Dringlichkeit, Filz ist Filz).
+Dazu gehört der Weg zurück: Nach dem Abhaken zeigt der Bildschirm fünf Sekunden lang das Erfolgsbanner „„{{Titel}}“ erledigt.“ mit einem fetten Textbutton „Rückgängig“ rechts (44 pt). Rückgängig öffnet die Erinnerung wieder und nimmt die erzeugte nächste Wiederholung zurück. Fünf statt drei Sekunden, weil es das einzige Rückgängig ist.
+App: namelessjames/frappies PR #198.
+
+### 2026-11-01: Lokaler Modus hat ein Gesicht
+Kontext: Ohne Konto begrüßte Home den Menschen als „Hundemensch“, der Avatar-Knopf in jeder Kopfzeile zeigte ein „?“, und das Profil sagte „Dein Profil“ über einem leeren Hero; nichts erklärte, dass die Akte nur auf diesem Handy liegt und was ein Konto bringt. Die Kritik der App (2026-11-01) stufte das als P1 ein. Fall 1 (eine Komponente und ein Zustand, die die Marke noch nicht abdeckte).
+Entscheidung: (1) Ist weder Name noch E-Mail bekannt, zeigt der Avatar-Knopf (Kopfzeile, Home-Schale, Profil-Hero) statt Initialen das Phosphor-Personen-Glyph in Filz, fett, 20 px im 44-px-Knopf und 32 px im 72-px-Hero; nie ein „?“. Home grüßt dann mit einem bloßen „Hallo“. (2) Im lokalen Modus steht an der Stelle des Profil-Heros eine Kleeschalen-Karte „Deine Akte liegt nur auf diesem Gerät“ (Headline 22) mit einem Satz dazu, was ein Konto bringt (gesichert, zweites Gerät, Einträge bleiben), dem Ball-Plate, dem Filz-Primärbutton „Konto erstellen“ und dem Filz-Textlink „Ich habe schon ein Konto“. Der Anmelden-Button am Fuß des Profils entfällt.
+Verworfen: einen erfundenen Namen behalten („Hundemensch“, „Freund“: grüßt einen Fremden mit einem Kosenamen), ein Hinweisbanner auf Home (Home gehört dem Nächsten, nicht der Kontowerbung), ein Modal beim Start (der lokale Modus ist eine freie Wahl, CONTEXT.md, und braucht keine Unterbrechung), „Gast“ als Wort (Glossar: zu vermeiden).
+App: namelessjames/frappies PR #198.
+
+### 2026-11-01: Schnell-Eintragen in zwei Gruppen
+Kontext: Das Blatt hinter „In die Akte eintragen“ listete alle acht Akten-Bereiche gleichwertig, bis fast an die Statusleiste. Acht gleiche Optionen an einem Entscheidungspunkt liegen über dem Arbeitsgedächtnis (Kritik der App, 2026-11-01, P2). Fall 2 (eine bestehende Komponente ändert sich); braucht die Freigabe der Inhaberin oder des Inhabers.
+Entscheidung: Zwei Gruppen zu je vier. Oben die Einträge, die immer wieder anfallen, in der Reihenfolge, in der das Papier kommt: Impfungen, Medikamente, Tierarztbesuche, Gewicht, als Zeilen mit Icon-Kachel und fettem Titel wie bisher. Darunter, nach einer Heckenlinie und 12 px, die seltenen: Erkrankungen, Allergien, Erinnerungen, Hundemarken, als 44-px-Zeilen ohne Kachel, Glyph 18 px in Salbei, Figtree Medium 15. Die Akte selbst (Steckbrief) behält ihre medizinische Reihenfolge.
+Verworfen: „Mehr“ aufklappen (versteckt vier Einträge hinter einem weiteren Tipp), zuletzt genutzt zuerst (die Reihenfolge springt, nichts lässt sich lernen), ein Raster aus Kacheln (acht Kacheln sind acht Optionen, nur bunter).
+App: namelessjames/frappies PR #198.
+
+### 2026-11-01: Home ohne KI-Kacheln
+Kontext: Home trug unter der Hundeliste die beiden KI-Kacheln und die Zeile „Bisherige Auswertungen“, die jeder Steckbrief ebenfalls zeigt. Mit zwei Hunden lief Home drei Bildschirme lang, und „Alles anzeigen“ öffnete einen Eingang mit denselben Zeilen. Kritik der App (2026-11-01, P2); die Inhaberin oder der Inhaber hat dem Wegfall zugestimmt. Fall 2 (ein bestehender Bildschirm ändert sich).
+Entscheidung: Home besteht aus vier Dingen: Schale, „Als Nächstes“, Hundeliste, Filz-Button „In die Akte eintragen“. Die KI-Werkzeuge stehen nur noch auf dem Steckbrief des Hundes. „Alles anzeigen“ erscheint nur, wenn der Eingang mehr hält als die Spur zeigt.
+Verworfen: KI-Kacheln behalten und den Steckbrief entlasten (die Werkzeuge gehören zum Hund, nicht zum Tag), eine einzelne „KI“-Zeile auf Home (bleibt ein fünftes Ding ohne Bezug zum Nächsten).
+App: namelessjames/frappies PR #198.
 

@@ -151,3 +151,10 @@ Kontext: Monatskontingent, Premium-Test und das Premium-Beispiel unter „Ton“
 Entscheidung: Das Monatskontingent gilt nur für Erkrankungs-Info und Futterplan; der Befund-Scan ist Premium. Der Premium-Test dauert 30 Tage, einmal je Konto. Das Premium-Beispiel nennt, was Premium bringt, nicht das Kontingent.
 Verworfen: Nur die Tageszahl ändern (die Zeile zum Kontingent bliebe falsch).
 App: namelessjames/frappies ADR 0009, ADR 0010. Web: namelessjames/frappies-web#4.
+
+### 2026-11-01: „Nichts fällig“ statt „alles erledigt“
+Kontext: Die Home-Schale sagte „Heute: alles erledigt.“ und die Hundekarte „Heute alles erledigt“, auch wenn an dem Tag nichts anstand. „Erledigt“ behauptet getane Arbeit; die App weiß nur, dass nichts fällig ist. Die Kritik der App (2026-11-01) merkte es an.
+Entscheidung: Schale „Heute: nichts fällig.“, Hundekarte „Heute nichts fällig“, Englisch „Today: nothing due.“ / „Nothing due today“. „{{name}} hat heute nichts mehr vor.“ bleibt, es behauptet nichts. Das Erfolgsbanner nach dem Abhaken sagt „„{{Titel}}“ erledigt.“, dort stimmt das Wort.
+Verworfen: „Alles im grünen Bereich“ (Floskel, und Grün ist hier eine Farbe mit Bedeutung), „Heute frei“ (klingt nach Urlaub).
+App: namelessjames/frappies PR #198.
+
