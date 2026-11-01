@@ -119,6 +119,8 @@ Die Gewichtskurve eines Hundes steht in der App auf dem Gewicht-Bildschirm, in e
 
 Die ganze Kurvenfläche ist eine Tippfläche (weit über 44 px); ein Tipp wählt den nächsten Punkt, auch wenn bei vielen Punkten jeder nur wenige Pixel Abstand hat. Die Kopfzeile hat eine feste Höhe, damit die Kurve beim Wählen nicht springt. Waagrechtes Wischen über die Kurve blättert um einen Zeitraum zurück (nach rechts wischen) oder vor (nach links): der Nachbarzeitraum folgt dem Finger und rastet ein. Zeiträume ohne Eintrag werden übersprungen, am ersten und am neuesten Eintrag ist Schluss. Das Zurückwischen des Systems bleibt überall außer auf der Kurve. Kein Filz auf der Kurve, kein Orange, keine Farbe pro Zeitraum. Tierarztmessungen nennt das Label in Worten, die Kurve markiert sie nicht. Die Kurve erscheint ohne Animation; beim Blättern bewegt sie nur der Finger. Für Screenreader ist sie ein einstellbares Element mit einer Zusammenfassung (erster und letzter Wert, Minimum, Maximum, Zeitraum), das mit Auf- und Abwischen blättert; die Eintragsliste darunter bleibt die vollständige Fassung.
 
+**Im Dokument.** In der Gesundheitsakte als PDF steht die Kurve statisch über der Eintragstabelle, für ein Jahr bis zum neuesten Eintrag und nur ab zwei Punkten. Sie behält Linie, Punkt und Raster aus der Tabelle oben, in denselben Stärken und Durchmessern; die Seite (weiß) ist ihre Fläche, ohne Karte, Radius oder Schatten. Es entfallen Zeitraum-Wahl, Kopfzeile, Auswahl, Label und Blättern. Die Achsen beschriftet Figtree 8 pt in `muted-foreground` mit `tabular-nums`: links kg, unten jeder Monat kurz („Jan.“). Darüber eine Bildunterschrift in Meta, die den Zeitraum nennt („Gewichtskurve, 12 Monate bis 10. September 2026“). Kein Filz, kein Orange; die eine Filzmarkierung der Seite bleibt der Name.
+
 ## Illustration in Komponenten
 
 Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illustration.md), Titel in Display 32 (Bricolage 800), Text Body, ein Primärbutton. Auf der Schale die `*-shell`-Variante.
@@ -135,6 +137,12 @@ Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illust
 - **Fußzeile der Website:** auf Kleeboden unter einer Heckenlinie, Meta 13/18 in Salbei, Links nach den Link-Regeln oben: Impressum, Datenschutz, Nutzungsbedingungen, Hilfe, Konto löschen, dazu contact@frappies.app. Keine Wortmarke, kein Filz, keine Illustration, keine Social-Icons.
 
 ## Entscheidungen
+
+### 2026-11-01: Gewichtskurve im Dokument
+Kontext: Die Gesundheitsakte als PDF zeigt den Gewichtsverlauf als Kurve über ein Jahr (namelessjames/frappies#102). Die Regeln der Gewichtskurve galten nur dem Bildschirm; „Dokumente und Präsentationen“ in [10 Anwendung](10-anwendung.md) kennt keine Kurve. Fall 1 (die Komponente bekommt eine Druckfassung, nichts Bestehendes ändert sich).
+Entscheidung: Dieselben Tokens und Maße wie am Bildschirm, ohne alles Interaktive; die Seite ist die Fläche; Achsenbeschriftung in 8 pt, passend zum Textmaß des Dokuments; eine Bildunterschrift nennt den Zeitraum.
+Verworfen: Karte mit Radius um die Kurve (auf Papier eine Fläche ohne Zweck), Filz für die Linie (die eine Filzmarkierung der Seite gehört dem Namen), Linie in Tinte statt `brand` (die Kurve sähe anders aus als in der App), Durchschnitt als Figure über der Kurve (die Tabelle darunter trägt die Werte).
+App: namelessjames/frappies#102.
 
 ### 2026-10-31: Gewichtskurve wählt und blättert wie Apple Health
 Kontext: Der Inhaber will getippte Werte wie in Apple Health (Wert und Zeitraum über dem Punkt, senkrechte Linie) und die Kurve um einen Zeitraum blättern können. Das Panel unter der Kurve mit bis zu fünf Einträgen war dafür zu lang. Fall 1 (die neue Komponente wird erweitert, bevor sie veröffentlicht ist).
