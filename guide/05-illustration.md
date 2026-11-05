@@ -17,7 +17,7 @@ Der Frappies-Hund ist ein struppiger, mittelgroßer Mischling, mit lockerer Pins
 
 | Pose | Datei | Bedeutung | Einsatz |
 |---|---|---|---|
-| Zoomie | `zoomie.png` | Freude, Ankunft | Home-Schale, Onboarding, Willkommen, Website-Hero |
+| Zoomie | `zoomie.png` | Freude, Ankunft | Home-Schale, Einführung (erste Folie), Willkommen, Website-Hero |
 | Resting | `resting.png` | Nichts zu tun oder einzutragen | „Heute alles erledigt“, leere Erinnerungen |
 | Ball | `ball.png` | Einladung anzufangen | Leere Akte, erster Hund, Premium-Seite |
 | Listening | `listening.png` | Alles ruhig, horcht | Mitteilungen leer, Erinnerungen |
