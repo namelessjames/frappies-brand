@@ -238,10 +238,10 @@ App: namelessjames/frappies PR #198.
 Kontext: Neue Halterinnen und Halter fanden die Funktionen jenseits der Grundlagen nicht (Gesundheitsakte als PDF, Befund scannen, Notfallkarte), und die Wahl zwischen lokalem Modus und Konto stand nirgends vor dem ersten Eintrag. Ein Wegwerf-Prototyp verglich drei Wege: nur Hinweise in den Funktionen, nur Folien, beides; beides gewann, mit mehr Folien. Fall 1 (eine neue Art Bildschirm, die die Marke noch nicht abdeckte).
 Entscheidung: Sechs Folien einmal pro frischer Installation (siehe „Einführung“), „Überspringen“ auf allen außer der letzten, die letzte stellt lokalen Modus („Los geht's“, primär) und Konto (Textlink) gleichwertig frei. Premium als leises Label auf der Scan-Folie, kein Preis.
 Verworfen: Coach Marks und geführte Touren (verdecken den Bildschirm, den sie erklären), Lottie oder Rive (neue Abhängigkeit und neue Zeichnungen), ein Konto-Hinweis auf Home oder spätere Erinnerungen daran (Home gehört dem Nächsten, Entscheidung „Lokaler Modus hat ein Gesicht“), aktive Seitenpunkte in Filz (Filz heißt Nächstes, nicht „hier bist du“).
-App: namelessjames/frappies#203.
+App: namelessjames/frappies PR #221 (#203).
 
 ### 2026-11-05: Erste-Schritte-Zustand statt leerer Liste
 Kontext: Leere Listen zeigten eine Pose und einen Satz „Noch keine … Trag oben … ein.“, und das Formular stand auf einem leeren Bildschirm schon offen; wer den Bildschirm zum ersten Mal sah, erfuhr nicht, wozu er da ist. Die Regel sah Display 32 und einen eigenen Primärbutton vor; daneben stand der Hinzufügen-Button des Bildschirms, also zwei Filzflächen. Fall 2 (eine bestehende Komponente ändert sich); braucht die Freigabe der Inhaberin oder des Inhabers.
 Entscheidung: `RecordEmpty` wird der Erste-Schritte-Zustand (siehe „Illustration in Komponenten“): Titel Headline 22 statt Display 32, höchstens zwei Sätze, kein eigener Button, gilt für jede Funktion, nicht nur für Akten-Listen. Das Formular startet geschlossen; „In die Akte eintragen“ auf Home öffnet es weiter direkt.
 Verworfen: Display 32 im Zustand (in einer Karte unter Hundechip und Button bricht der deutsche Titel auf drei Zeilen), ein eigener Button im Zustand (zweiter Filz neben dem Hinzufügen-Button, „Felt means next“), ein Wegklicken mit gespeichertem Zustand (der Zustand ist die leere Liste selbst; nichts zu merken).
-App: namelessjames/frappies#203.
+App: namelessjames/frappies PR #221 (#203).
