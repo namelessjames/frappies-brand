@@ -123,7 +123,24 @@ Die ganze Kurvenfläche ist eine Tippfläche (weit über 44 px); ein Tipp wählt
 
 ## Illustration in Komponenten
 
-Leere Listen nutzen `RecordEmpty` mit einer Pose aus [05 Illustration](05-illustration.md), Titel in Display 32 (Bricolage 800), Text Body, ein Primärbutton. Auf der Schale die `*-shell`-Variante.
+**Erste-Schritte-Zustand.** Jeder Bildschirm, auf dem für diesen Hund noch nichts eingetragen ist (jede Akten-Liste, Tierarztpraxen, Befund scannen, Futterplan, KI-Auswertungen, Mitteilungen), zeigt an der Stelle der Liste eine weiße Karte (Radius 18 px, `shadow.card`) mit einer Pose aus [05 Illustration](05-illustration.md) (130 px breit, Wiederholungen erlaubt, keine neue Zeichnung), darunter zentriert einen Titel in Headline 22 (Bricolage 800) und höchstens zwei Sätze Body 14 in `muted-foreground`: was das ist und warum es für die Praxis oder den Hund zählt. Kein eigener Button: der Hinzufügen-Button des Bildschirms ist die eine Handlung, und sein Formular startet auf einem leeren Bildschirm geschlossen (außer der Bildschirm wurde zum Eintragen geöffnet, Home „In die Akte eintragen“). Der Zustand verschwindet mit dem ersten Eintrag; es wird nichts gespeichert und nichts weggeklickt. Bewegung: der eine inszenierte Moment des Bildschirms (siehe Einführung). Im Dunkelmodus die `*-shell`-Variante.
+
+## Einführung
+
+Einmal pro frischer Installation, vor Home, sechs Folien auf Kleeboden. Ein Gerät, auf dem beim Update schon ein Hund liegt, sieht sie nie; wiederholen lässt sie sich nicht.
+
+| Folie | Pose | Titel | Text |
+|---|---|---|---|
+| 1 Grundlagen | Zoomie | Alles über deinen Hund an einem Ort | Impfungen, Medikamente, Erkrankungen, Gewicht und Tierarztbesuche in einer Gesundheitsakte. Statt auf Zetteln und im Kopf. |
+| 2 Gesundheitsakte als PDF | Lead | Fertig für die Praxis | Die Gesundheitsakte als PDF, sortiert und mit Datum. Ein Tipp, und du teilst sie mit deiner Tierarztpraxis. |
+| 3 Erinnerungen | Listening | Rechtzeitig erinnert | Impfungen, Medikamente, Wurmkuren und Tierarztbesuche melden sich, bevor sie fällig sind. |
+| 4 Befund scannen | Sniffing | Befund scannen | Fotografier einen Laborbefund, und die KI liest die Werte aus. Das Foto bleibt auf deinem Handy. |
+| 5 Notfallkarte | Tag | Die Notfallkarte | Alles, was Finder, Hundesitter und Notfallpraxis wissen müssen. Als Bild teilbar. |
+| 6 Lokal oder Konto | Ball | Deine Akte, deine Wahl | Ohne Konto liegt die Akte nur auf diesem Handy. Mit Konto ist sie gesichert und auch auf deinen anderen Geräten da. |
+
+Aufbau einer Folie, von oben: rechts oben der Textlink „Überspringen“ (Figtree SemiBold 15, Tinte, 44 pt), mittig die Pose 200 px breit, darunter Titel in Display 32 und der Text in Body 16 `muted-foreground`, beides zentriert und umbrechend, nie gekürzt. Am Fuß die Seitenpunkte (8 px, aktiv `secondary`, sonst `border`; kein Filz, die Punkte sind kein „Nächstes“) und der Primärbutton „Weiter“. Wischen blättert ebenso. Folie 4 trägt über dem Titel das leise Label „Premium“ wie der Auswahl-Chip in Ruhe (`muted` mit Tinte, Meta 13), keinen Preis, keinen Test-Hinweis. Folie 6 hat kein „Überspringen“: „Los geht's“ (Primärbutton, lokaler Modus) führt nach Home, darunter der Textlink „Konto erstellen“ in `brand` öffnet die Registrierung. Kein Modal, kein Nachfragen. „Überspringen“ springt auf Folie 6; die Wahl zwischen lokal und Konto lässt sich nicht überspringen. Das Konto kommt nur hier zur Sprache, danach wohnt es im Profil.
+
+Bewegung nach [07 Bewegung](07-bewegung.md): ein inszenierter Moment pro Folie und pro Erste-Schritte-Zustand. Die Pose skaliert von 0,85 mit `motion.spring.entry`, danach blendet der Text mit 8 px Aufwärtsversatz ein (`motion.duration.slow`, 120 ms nach der Pose). Eine Folie spielt ihren Moment beim ersten Erscheinen, nicht bei jedem Zurückwischen. Unter Reduced Motion steht alles sofort im Endzustand.
 
 ## Web-Ergänzungen (Erweiterung)
 
@@ -217,3 +234,14 @@ Entscheidung: Home besteht aus vier Dingen: Schale, „Als Nächstes“, Hundeli
 Verworfen: KI-Kacheln behalten und den Steckbrief entlasten (die Werkzeuge gehören zum Hund, nicht zum Tag), eine einzelne „KI“-Zeile auf Home (bleibt ein fünftes Ding ohne Bezug zum Nächsten).
 App: namelessjames/frappies PR #198.
 
+### 2026-11-05: Einführung beim ersten Start
+Kontext: Neue Halterinnen und Halter fanden die Funktionen jenseits der Grundlagen nicht (Gesundheitsakte als PDF, Befund scannen, Notfallkarte), und die Wahl zwischen lokalem Modus und Konto stand nirgends vor dem ersten Eintrag. Ein Wegwerf-Prototyp verglich drei Wege: nur Hinweise in den Funktionen, nur Folien, beides; beides gewann, mit mehr Folien. Fall 1 (eine neue Art Bildschirm, die die Marke noch nicht abdeckte).
+Entscheidung: Sechs Folien einmal pro frischer Installation (siehe „Einführung“), „Überspringen“ auf allen außer der letzten, die letzte stellt lokalen Modus („Los geht's“, primär) und Konto (Textlink) gleichwertig frei. Premium als leises Label auf der Scan-Folie, kein Preis.
+Verworfen: Coach Marks und geführte Touren (verdecken den Bildschirm, den sie erklären), Lottie oder Rive (neue Abhängigkeit und neue Zeichnungen), ein Konto-Hinweis auf Home oder spätere Erinnerungen daran (Home gehört dem Nächsten, Entscheidung „Lokaler Modus hat ein Gesicht“), aktive Seitenpunkte in Filz (Filz heißt Nächstes, nicht „hier bist du“).
+App: namelessjames/frappies PR #221 (#203).
+
+### 2026-11-05: Erste-Schritte-Zustand statt leerer Liste
+Kontext: Leere Listen zeigten eine Pose und einen Satz „Noch keine … Trag oben … ein.“, und das Formular stand auf einem leeren Bildschirm schon offen; wer den Bildschirm zum ersten Mal sah, erfuhr nicht, wozu er da ist. Die Regel sah Display 32 und einen eigenen Primärbutton vor; daneben stand der Hinzufügen-Button des Bildschirms, also zwei Filzflächen. Fall 2 (eine bestehende Komponente ändert sich); braucht die Freigabe der Inhaberin oder des Inhabers.
+Entscheidung: `RecordEmpty` wird der Erste-Schritte-Zustand (siehe „Illustration in Komponenten“): Titel Headline 22 statt Display 32, höchstens zwei Sätze, kein eigener Button, gilt für jede Funktion, nicht nur für Akten-Listen. Das Formular startet geschlossen; „In die Akte eintragen“ auf Home öffnet es weiter direkt.
+Verworfen: Display 32 im Zustand (in einer Karte unter Hundechip und Button bricht der deutsche Titel auf drei Zeilen), ein eigener Button im Zustand (zweiter Filz neben dem Hinzufügen-Button, „Felt means next“), ein Wegklicken mit gespeichertem Zustand (der Zustand ist die leere Liste selbst; nichts zu merken).
+App: namelessjames/frappies PR #221 (#203).
