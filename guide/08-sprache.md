@@ -54,6 +54,10 @@ Humor sitzt im Bild (der Hund, der Ball) und in einem Halbsatz, nie in der Daten
 | Erkrankung | Erkrankung | condition | Englisch nicht „disease“ |
 | Medikament | Medikament | medication | |
 | Dosis / Dosierung | Dosis / Dosierung | dose / dosage | |
+| Wann ein Medikament gegeben wird | Rhythmus | rhythm | Täglich, an gewählten Wochentagen (jede Woche oder alle n Wochen) oder monatlich. Nicht „Zeitplan“, „Intervall“, „schedule“ |
+| Rhythmus alle n Wochen | Jede Woche / Alle {{count}} Wochen | Every week / Every {{count}} weeks | Nicht „zweiwöchentlich“, „14-tägig“; nie „biweekly“ (heißt für viele zweimal pro Woche) |
+| Wochentage als Auswahl | Mo Di Mi Do Fr Sa So | Mon Tue Wed Thu Fri Sat Sun | Die Woche beginnt am Montag |
+| Ab wann „alle n Wochen“ zählt | Erste Gabe | first dose | |
 | Impfung | Impfung | vaccination | |
 | Hundemarke | Hundemarke | dog tag | |
 | Tierarzt (Eintrag) | Tierarztpraxis / Praxis | vet | Liste: „Tierarztpraxen“ |
@@ -158,3 +162,8 @@ Entscheidung: Schale „Heute: nichts fällig.“, Hundekarte „Heute nichts f�
 Verworfen: „Alles im grünen Bereich“ (Floskel, und Grün ist hier eine Farbe mit Bedeutung), „Heute frei“ (klingt nach Urlaub).
 App: namelessjames/frappies PR #198.
 
+### 2026-11-10: Rhythmus und Erste Gabe für Medikamente
+Kontext: Die App lässt Medikamente an gewählten Wochentagen und alle n Wochen erinnern; dafür fehlten Begriffe. Fall 1 (neues Muster, nur ergänzend).
+Entscheidung: „Rhythmus“ für das Ganze (die App sagt es schon im Hinweis zur Häufigkeit), „Alle {{count}} Wochen“ statt „14-tägig“, „Erste Gabe“ für das Datum, ab dem gezählt wird, Wochentage ab Montag.
+Verworfen: „Zeitplan“ (klingt nach Kalender, nicht nach Medikament), „Intervall“ (technisch), „biweekly“ (doppeldeutig).
+App: namelessjames/frappies#243.
